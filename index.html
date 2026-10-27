@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mentes do Software</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400;1,600&display=swap">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div id="prog" aria-hidden="true"><i></i></div>
+
+<header class="capa">
+  <div class="pagina">
+    <div class="edicao"><span>Edição 1, outubro de 2026</span><span>Leitura de base para quem programa</span></div>
+    <h1 class="nome">Mentes do <span>Software</span></h1>
+    <div class="capa-grade">
+      <div>
+        <p class="chamada">As dez escolas de pensamento que moldaram o jeito de projetar software, quem pensou cada uma, onde elas concordam, onde brigam e onde você estuda cada ideia.</p>
+        <ul class="chamadas">
+          <li>O programa de verdade mora na cabeça<span>Peter Naur e a teoria por trás do código</span></li>
+          <li>Funções pequenas ou módulos profundos?<span>O debate entre Ousterhout e Uncle Bob</span></li>
+          <li>Onde estudar<span>Livros, artigos, cursos e palestras, quase tudo grátis</span></li>
+          <li>Sete semanas para montar a sua base<span>Um plano de leitura, do mais fácil ao mais denso</span></li>
+        </ul>
+      </div>
+      <div class="capa-retratos" aria-label="Os pensadores desta edição">
+        <figure><span class="pt ph-ED" role="img" aria-label="Edsger Dijkstra"></span><figcaption>Dijkstra</figcaption></figure>
+        <figure><span class="pt ph-DP" role="img" aria-label="David Parnas"></span><figcaption>Parnas</figcaption></figure>
+        <figure><span class="pt ph-TH" role="img" aria-label="Tony Hoare"></span><figcaption>Hoare</figcaption></figure>
+        <figure><span class="pt ph-LL" role="img" aria-label="Leslie Lamport"></span><figcaption>Lamport</figcaption></figure>
+        <figure><span class="pt ph-KT" role="img" aria-label="Ken Thompson"></span><figcaption>Thompson</figcaption></figure>
+        <figure><span class="pt ph-DR" role="img" aria-label="Dennis Ritchie"></span><figcaption>Ritchie</figcaption></figure>
+        <figure><span class="pt ph-RP" role="img" aria-label="Rob Pike"></span><figcaption>Pike</figcaption></figure>
+        <figure><span class="pt ph-AK" role="img" aria-label="Alan Kay"></span><figcaption>Kay</figcaption></figure>
+        <figure><span class="pt ph-RH" role="img" aria-label="Rich Hickey"></span><figcaption>Hickey</figcaption></figure>
+        <figure><span class="pt ph-JB" role="img" aria-label="John Backus"></span><figcaption>Backus</figcaption></figure>
+        <figure><span class="pt ph-KB" role="img" aria-label="Kent Beck"></span><figcaption>Beck</figcaption></figure>
+        <figure><span class="pt ph-MF" role="img" aria-label="Martin Fowler"></span><figcaption>Fowler</figcaption></figure>
+        <figure><span class="pt ph-JO" role="img" aria-label="John Ousterhout"></span><figcaption>Ousterhout</figcaption></figure>
+        <figure><span class="pt ph-RM" role="img" aria-label="Robert C. Martin"></span><figcaption>Martin</figcaption></figure>
+        <figure><span class="pt ph-JA" role="img" aria-label="Joe Armstrong"></span><figcaption>Armstrong</figcaption></figure>
+        <figure><span class="pt ph-FB" role="img" aria-label="Fred Brooks"></span><figcaption>Brooks</figcaption></figure>
+        <figure><span class="pt ph-PN" role="img" aria-label="Peter Naur"></span><figcaption>Naur</figcaption></figure>
+        <figure><span class="pt sem">RG</span><figcaption>Gabriel</figcaption></figure>
+        <figure><span class="pt sem">MA</span><figcaption>Acton</figcaption></figure>
+        <figure><span class="pt sem">EE</span><figcaption>Evans</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="sumario" aria-label="Sumário">
+  <div class="pagina">
+    <h2>Nesta edição</h2>
+    <ol>
+      <li><a href="#abertura"><span class="n">—</span><span class="t">O programa de verdade não é o código<i>Abertura</i></span></a></li>
+      <li><a href="#rigor"><span class="n">1</span><span class="t">Pensar antes de codar<i>Dijkstra, Parnas, Hoare, Lamport</i></span></a></li>
+      <li><a href="#unix"><span class="n">2</span><span class="t">Pequeno, simples, combinável<i>Thompson, Ritchie, Pike, Gabriel</i></span></a></li>
+      <li><a href="#smalltalk"><span class="n">3</span><span class="t">Objetos que conversam<i>Alan Kay</i></span></a></li>
+      <li><a href="#funcional"><span class="n">4</span><span class="t">O estado é o vilão<i>Hickey, Moseley e Marks, Backus</i></span></a></li>
+      <li><a href="#agil"><span class="n">5</span><span class="t">Design que emerge<i>Beck, Fowler</i></span></a></li>
+      <li><a href="#debate"><span class="n">6</span><span class="t">Funções pequenas ou módulos profundos?<i>Ousterhout contra Martin</i></span></a></li>
+      <li><a href="#dados"><span class="n">7</span><span class="t">O hardware existe<i>Acton, Muratori</i></span></a></li>
+      <li><a href="#ddd"><span class="n">8</span><span class="t">O negócio no centro<i>Eric Evans</i></span></a></li>
+      <li><a href="#erlang"><span class="n">9</span><span class="t">Sistemas que não caem<i>Joe Armstrong</i></span></a></li>
+      <li><a href="#humano"><span class="n">10</span><span class="t">Software é feito por gente<i>Brooks, Conway, Naur, Gross</i></span></a></li>
+      <li><a href="#sintese"><span class="n">—</span><span class="t">Onde concordam e onde brigam<i>Síntese</i></span></a></li>
+      <li><a href="#biblioteca"><span class="n">—</span><span class="t">Onde estudar<i>Biblioteca</i></span></a></li>
+      <li><a href="#trilha"><span class="n">—</span><span class="t">Sete semanas de leitura<i>Plano de estudo</i></span></a></li>
+    </ol>
+  </div>
+</nav>
+
+<!-- ABERTURA -->
+<article class="materia" id="abertura">
+  <div class="pagina">
+    <div class="corrido"><span>Mentes do Software</span><span>Abertura</span></div>
+    <div class="abre"><h2 style="grid-column:1/-1">O programa de verdade não é o código</h2>
+      <p class="linha-fina">Em 1985, Peter Naur explicou por que um sistema continua rodando depois que seus autores vão embora, mas ninguém mais consegue mexer nele.</p></div>
+    <div class="corpo">
+      <div class="texto">
+        <p>O dinamarquês Peter Naur, um dos criadores do Algol 60 e da notação BNF, escreveu um ensaio curto chamado <em>Programming as Theory Building</em>. A tese é que programar é construir uma teoria: entender o problema a ponto de saber por que cada parte é como é, o que pode mudar e o que não pode.</p>
+        <p>O código é o que sobra dessa teoria. Ele mostra <strong>o quê</strong>, mas raramente mostra <strong>o porquê</strong>. Quando as pessoas que tinham a teoria vão embora, o sistema continua rodando, e ninguém mais sabe mexer nele com segurança.</p>
+        <p>Por isso vale ter base. Frameworks mudam a cada cinco anos. As ideias desta revista têm entre 40 e 55 anos e continuam valendo. Quem conhece só a forma copia padrões sem saber quando eles param de servir. Quem conhece a razão tem critério.</p>
+        <p>Os grandes também discordam entre si, e muito. Conhecer as várias escolas evita que você vire seguidor de uma só. Leia cada reportagem como uma lente, não como uma lei.</p>
+      </div>
+      <div class="margem">
+        <figure class="ilus">
+          <svg viewBox="0 0 300 220" role="img" aria-label="Um círculo grande chamado teoria, com um retângulo pequeno dentro chamado código">
+            <circle cx="150" cy="105" r="92" class="dash"/>
+            <text x="150" y="52" text-anchor="middle" class="t-big">teoria</text>
+            <text x="150" y="72" text-anchor="middle" class="t-mu">o porquê de cada decisão</text>
+            <text x="150" y="88" text-anchor="middle" class="t-mu">o que pode mudar</text>
+            <rect x="122" y="112" width="56" height="34" class="bx"/>
+            <rect x="130" y="120" width="32" height="3" class="mu"/>
+            <rect x="130" y="127" width="40" height="3" class="mu"/>
+            <rect x="130" y="134" width="24" height="3" class="mu"/>
+            <text x="150" y="166" text-anchor="middle" class="t-ac">código</text>
+            <text x="150" y="214" text-anchor="middle" class="t-mu">o que fica no disco</text>
+          </svg>
+          <figcaption>A teoria fica na cabeça de quem construiu. O código é uma parte pequena dela.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- 1 -->
+<article class="materia" id="rigor">
+  <div class="pagina">
+    <div class="corrido"><span>Mentes do Software</span><span>A escola do rigor</span></div>
+    <div class="abre"><span class="num">1</span><h2>Pensar antes de codar</h2>
+      <p class="linha-fina">Matemáticos que trataram software como coisa séria: dividir bem, esconder o que muda e provar que funciona.</p></div>
+    <div class="corpo">
+      <div class="texto">
+        <p>No fim dos anos 60, o software já era grande demais para caber na cabeça de uma pessoa. A resposta desta escola foi a disciplina: se a mente é limitada, o programa tem que ser organizado para caber nela.</p>
+        <p><strong>Dijkstra</strong> deu nome à ideia central, a <strong>separação de preocupações</strong>: estudar um aspecto do problema de cada vez, sabendo que os outros existem. Anos depois ele mesmo criticou o slogan. Separar é fácil. O difícil é saber onde cortar e como juntar de novo.</p>
+        <p><strong>Parnas</strong> respondeu onde cortar. No artigo de 1972, ele divide o mesmo sistema de dois jeitos. O primeiro segue os passos do fluxo: ler, processar, gravar. O segundo divide pelas <strong>decisões que podem mudar</strong>, e cada módulo esconde uma delas. O segundo aguenta muito melhor a mudança, e é dele que vem o encapsulamento que você usa hoje.</p>
+        <p class="olho">Há dois jeitos de projetar: tão simples que obviamente não tem defeito, ou tão complexo que não tem defeito óbvio.<cite>Tony Hoare, palestra do Prêmio Turing, 1980 (paráfrase)</cite></p>
+        <p><strong>Hoare</strong> completou que o primeiro jeito é muito mais difícil. <strong>Lamport</strong> levou isso adiante: o arquiteto desenha a planta antes de assentar o tijolo, mas o programador quase nunca escreve o que vai fazer antes de codar. Ele defende escrever a especificação primeiro, mesmo que seja em prosa.</p>
+      </div>
+      <div class="margem">
+        <figure class="ilus">
+          <svg viewBox="0 0 300 200" role="img" aria-label="Três módulos, cada um com um segredo escondido no centro e uma interface pequena no topo">
+            <path d="M68 30 H134 M166 30 H232" class="ln"/>
+            <rect x="15" y="44" width="86" height="116" class="bx"/>
+            <rect x="107" y="44" width="86" height="116" class="bx"/>
+            <rect x="199" y="44" width="86" height="116" class="bx"/>
+            <rect x="40" y="22" width="36" height="16" class="ac"/>
+            <rect x="132" y="22" width="36" height="16" class="ac"/>
+            <rect x="224" y="22" width="36" height="16" class="ac"/>
+            <path d="M58 38 V44 M150 38 V44 M242 38 V44" class="ln"/>
+            <rect x="38" y="76" width="40" height="40" class="mu"/>
+            <rect x="130" y="76" width="40" height="40" class="mu"/>
+            <rect x="222" y="76" width="40" height="40" class="mu"/>
+            <text x="58" y="138" text-anchor="middle" class="t-mu">segredo</text>
+            <text x="150" y="138" text-anchor="middle" class="t-mu">segredo</text>
+            <text x="242" y="138" text-anchor="middle" class="t-mu">segredo</text>
+            <text x="150" y="12" text-anchor="middle" class="t-ac">só a interface aparece</text>
+            <text x="150" y="188" text-anchor="middle" class="t-mu">divida pelo que pode mudar</text>
+          </svg>
+          <figcaption>Parnas, 1972: cada módulo esconde uma decisão de projeto. Se ela mudar, só aquele módulo muda.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <h3 class="quem-tit">Quem é quem</h3>
+    <ul class="quem">
+      <li><span class="pt ph-ED" role="img" aria-label="Edsger Dijkstra"></span><div><h3>Edsger Dijkstra</h3><span class="anos">1930–2002, Holanda</span><p>Algoritmo do menor caminho, programação estruturada e a carta contra o GOTO. Escreveu mais de mil notas à mão, as EWDs.</p></div></li>
+      <li><span class="pt ph-DP" role="img" aria-label="David Parnas"></span><div><h3>David Parnas</h3><span class="anos">1941, Canadá e EUA</span><p>Pai da ocultação de informação. Mostrou que o critério de divisão importa mais que a divisão em si.</p></div></li>
+      <li><span class="pt ph-TH" role="img" aria-label="Tony Hoare"></span><div><h3>Tony Hoare</h3><span class="anos">1934–2026, Reino Unido</span><p>Criou o quicksort e a lógica de Hoare. Na palestra do Turing, contou os próprios fracassos de projeto.</p></div></li>
+      <li><span class="pt ph-LL" role="img" aria-label="Leslie Lamport"></span><div><h3>Leslie Lamport</h3><span class="anos">1941, EUA</span><p>Relógios lógicos, Paxos, LaTeX e TLA+. Insiste que programar e codar são coisas diferentes.</p></div></li>
+    </ul>
+    <div class="formulario" aria-label="Onde ler">
+      <div class="folha">
+        <p class="cab"><span>ONDE LER</span><span>CAP 1 / FL 01</span></p>
+        <ol>
+          <li><span class="ref">CMU-CS-71-101</span><a href="https://apps.dtic.mil/sti/tr/pdf/AD0773837.pdf">Parnas, On the criteria... modules</a><span class="ano">1971</span></li>
+          <li><span class="ref">CACM 15(12)</span><span>Mesmo artigo, versão da revista</span><span class="ano">1972</span></li>
+          <li><span class="ref">EWD ARQUIVO</span><a href="https://www.cs.utexas.edu/~EWD/">Dijkstra, as notas manuscritas</a><span class="ano">—</span></li>
+          <li><span class="ref">CACM 24(2)</span><a href="https://blog.acolyer.org/2016/09/07/the-emperors-old-clothes/">Hoare, The Emperor's Old Clothes</a><span class="ano">1981</span></li>
+          <li><span class="ref">MSR VIDEO</span><a href="https://www.microsoft.com/en-us/research/video/thinking-for-programmers/">Lamport, Thinking Above the Code</a><span class="ano">—</span></li>
+        </ol>
+        <p></p>
+      </div>
+    </div>
+    <div class="folio">1</div>
+  </div>
+</article>
+
+<!-- 2 -->
+<article class="materia" id="unix">
+  <div class="pagina">
+    <div class="corrido"><span>Mentes do Software</span><span>Bell Labs e New Jersey</span></div>
+    <div class="abre"><span class="num">2</span><h2>Pequeno, simples, combinável</h2>
+      <p class="linha-fina">A turma que fez o Unix e o C: programas que fazem uma coisa só, ligados por texto.</p></div>
+    <div class="corpo">
+      <div class="texto">
+        <p>Enquanto o MIT queria a solução perfeita, um grupo dos Bell Labs, em New Jersey, queria algo que funcionasse logo. Dali saíram o Unix e o C. A ideia era fazer programas pequenos, cada um fazendo uma coisa bem, e combiná-los por uma interface universal: texto.</p>
+        <p><strong>Rob Pike</strong> resumiu a visão sobre dados em duas palavras, na regra 5 das suas notas de programação: "Data dominates." Escolha bem a estrutura de dados e o algoritmo fica quase óbvio. Quem trabalha com banco de dados conhece isso: uma tabela bem desenhada resolve metade do problema.</p>
+        <p><strong>Richard Gabriel</strong>, um homem do Lisp, olhou de fora e escreveu <em>Worse is Better</em>, em 1989. Ele comparou dois jeitos de pensar. No do MIT, a interface tem que ser perfeita, mesmo que a implementação fique complicada. No de New Jersey, a implementação simples vem primeiro, mesmo que a interface sofra.</p>
+        <p class="olho">A solução mais simples, e "pior", se espalha mais rápido e sobrevive melhor.<cite>Richard Gabriel, 1989 (paráfrase)</cite></p>
+        <p>Os exemplos dele: o C venceu o Lisp, e o Unix venceu sistemas mais elegantes. A lição incômoda é que ser simples de implementar e de levar para outra máquina pesa mais do que estar certo.</p>
+      </div>
+      <div class="margem">
+        <figure class="ilus">
+          <svg viewBox="0 0 300 170" role="img" aria-label="Pipeline do Unix: cat, grep, sort e uniq ligados por pipes">
+            <text x="150" y="22" text-anchor="middle" class="t-ac">texto entra, texto sai</text>
+            <rect x="4" y="62" width="58" height="38" class="bx"/>
+            <rect x="80" y="62" width="58" height="38" class="bx"/>
+            <rect x="156" y="62" width="58" height="38" class="bx"/>
+            <rect x="232" y="62" width="58" height="38" class="bx"/>
+            <text x="33" y="85" text-anchor="middle">cat</text>
+            <text x="109" y="85" text-anchor="middle">grep</text>
+            <text x="185" y="85" text-anchor="middle">sort</text>
+            <text x="261" y="85" text-anchor="middle">uniq</text>
+            <path d="M62 81 H80 M138 81 H156 M214 81 H232" class="lna"/>
+            <text x="71" y="54" text-anchor="middle" class="t-ac t-big">|</text>
+            <text x="147" y="54" text-anchor="middle" class="t-ac t-big">|</text>
+            <text x="223" y="54" text-anchor="middle" class="t-ac t-big">|</text>
+            <text x="33" y="120" text-anchor="middle" class="t-mu">lê</text>
+            <text x="109" y="120" text-anchor="middle" class="t-mu">filtra</text>
+            <text x="185" y="120" text-anchor="middle" class="t-mu">ordena</text>
+            <text x="261" y="120" text-anchor="middle" class="t-mu">tira repetido</text>
+            <text x="150" y="156" text-anchor="middle" class="t-mu">cada um faz uma coisa bem</text>
+          </svg>
+          <figcaption>A filosofia Unix: peças pequenas que se combinam valem mais que um programa que faz tudo.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <h3 class="quem-tit">Quem é quem</h3>
+    <ul class="quem">
+      <li><span class="pt ph-KT" role="img" aria-label="Ken Thompson"></span><div><h3>Ken Thompson</h3><span class="anos">1943, EUA</span><p>Criou o Unix, a linguagem B, as expressões regulares no editor e, décadas depois, ajudou a criar o Go.</p></div></li>
+      <li><span class="pt ph-DR" role="img" aria-label="Dennis Ritchie"></span><div><h3>Dennis Ritchie</h3><span class="anos">1941–2011, EUA</span><p>Criou o C e reescreveu o Unix nele. Coautor do livro K&amp;R, até hoje modelo de texto técnico enxuto.</p></div></li>
+      <li><span class="pt ph-RP" role="img" aria-label="Rob Pike"></span><div><h3>Rob Pike</h3><span class="anos">1956, Canadá</span><p>Plan 9, UTF-8 (com Thompson) e Go. As cinco regras dele cabem numa página.</p></div></li>
+      <li><span class="pt sem">RG</span><div><h3>Richard Gabriel</h3><span class="anos">1949, EUA</span><p>Especialista em Lisp. Deu nome à briga entre fazer a coisa certa e fazer o simples que funciona.</p></div></li>
+    </ul>
+    <div class="formulario" aria-label="Onde ler">
+      <div class="folha">
+        <p class="cab"><span>ONDE LER</span><span>CAP 2 / FL 01</span></p>
+        <ol>
+          <li><span class="ref">PRINCETON CS217</span><a href="https://www.cs.princeton.edu/courses/archive/spr01/cs217/pike.html">Pike, Notes on Programming in C</a><span class="ano">1989</span></li>
+          <li><span class="ref">DREAMSONGS</span><a href="https://dreamsongs.com/RiseOfWorseIsBetter.html">Gabriel, The Rise of Worse is Better</a><span class="ano">1989</span></li>
+        </ol>
+        <p></p>
+      </div>
+    </div>
+    <div class="folio">2</div>
+  </div>
+</article>
+
+<!-- 3 -->
+<article class="materia" id="smalltalk">
+  <div class="pagina">
+    <div class="corrido"><span>Mentes do Software</span><span>Smalltalk</span></div>
+    <div class="abre"><span class="num">3</span><h2>Objetos que conversam</h2>
+      <p class="linha-fina">O homem que batizou a orientação a objetos diz que o mundo entendeu a parte menos importante.</p></div>
+    <div class="corpo">
+      <div class="texto">
+        <p><strong>Alan Kay</strong> vinha da biologia e das redes. A imagem dele para um programa era um monte de células independentes, cada uma com seu interior protegido, conversando só por mensagens.</p>
+        <p>Num email de 1998 para a lista do Squeak, ele lamentou ter usado a palavra "objetos". Segundo ele, isso fez todo mundo focar na ideia menor, as classes e o que tem dentro delas, quando a grande ideia era a <strong>troca de mensagens</strong>. Sistemas que crescem bem dependem mais de como as partes se comunicam do que de como cada parte é por dentro.</p>
+        <p>Vale um cuidado histórico: Kay não inventou os objetos. Classes e objetos já existiam no Simula 67, dos noruegueses Dahl e Nygaard, e o próprio manual do Smalltalk cita o Simula como inspiração.</p>
+        <p>A orientação a objetos que se ensina hoje, com herança e hierarquias de classes, não é o que o criador do termo tinha em mente. E repare como a ideia dele conversa com Parnas e com o Erlang, na reportagem 9: interior escondido, comunicação explícita.</p>
+      </div>
+      <div class="margem">
+        <figure class="ilus">
+          <svg viewBox="0 0 300 210" role="img" aria-label="Três células trocando mensagens">
+            <circle cx="62" cy="70" r="34" class="bx"/>
+            <circle cx="238" cy="70" r="34" class="bx"/>
+            <circle cx="150" cy="158" r="34" class="bx"/>
+            <circle cx="62" cy="70" r="11" class="mu"/>
+            <circle cx="238" cy="70" r="11" class="mu"/>
+            <circle cx="150" cy="158" r="11" class="mu"/>
+            <path d="M98 66 H202 M220 102 L180 134 M120 134 L80 102" class="lna"/>
+            <rect x="136" y="56" width="28" height="20" class="ac"/><path d="M136 56 L150 68 L164 56" fill="none" stroke="var(--papel)" stroke-width="1.6"/>
+            <rect x="186" y="108" width="28" height="20" class="ac"/><path d="M186 108 L200 120 L214 108" fill="none" stroke="var(--papel)" stroke-width="1.6"/>
+            <rect x="86" y="108" width="28" height="20" class="ac"/><path d="M86 108 L100 120 L114 108" fill="none" stroke="var(--papel)" stroke-width="1.6"/>
+            <text x="150" y="20" text-anchor="middle" class="t-ac">a ideia grande é a mensagem</text>
+            <text x="62" y="122" text-anchor="middle" class="t-mu">objeto</text>
+            <text x="238" y="122" text-anchor="middle" class="t-mu">objeto</text>
+          </svg>
+          <figcaption>Kay pensava em objetos como células ou computadores numa rede: ninguém mexe no interior do outro, só manda mensagem.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <h3 class="quem-tit">Quem é quem</h3>
+    <ul class="quem">
+      <li><span class="pt ph-AK" role="img" aria-label="Alan Kay"></span><div><h3>Alan Kay</h3><span class="anos">1940, EUA</span><p>Smalltalk, o conceito do Dynabook (um tablet imaginado em 1972) e boa parte da interface gráfica moderna, no Xerox PARC.</p></div></li>
+      <li><span class="pt sem">DN</span><div><h3>Ole-Johan Dahl e Kristen Nygaard</h3><span class="anos">Noruega, Simula 67</span><p>Criaram classes, objetos e herança para simular sistemas do mundo real. Base do C++ e do Java.</p></div></li>
+    </ul>
+    <div class="formulario" aria-label="Onde ler">
+      <div class="folha">
+        <p class="cab"><span>ONDE LER</span><span>CAP 3 / FL 01</span></p>
+        <ol>
+          <li><span class="ref">SQUEAK-DEV</span><a href="https://lists.squeakfoundation.org/pipermail/squeak-dev/1998-October/017019.html">Kay, o email sobre mensagens</a><span class="ano">1998</span></li>
+          <li><span class="ref">HILLELWAYNE</span><a href="https://hillelwayne.com/post/alan-kay/">Wayne, Alan Kay did not invent objects</a><span class="ano">—</span></li>
+        </ol>
+        <p></p>
+      </div>
+    </div>
+    <div class="folio">3</div>
+  </div>
+</article>
+
+<!-- 4 -->
+<article class="materia" id="funcional">
+  <div class="pagina">
+    <div class="corrido"><span>Mentes do Software</span><span>Funcional</span></div>
+    <div class="abre"><span class="num">4</span><h2>O estado é o vilão</h2>
+      <p class="linha-fina">Simples não é o mesmo que fácil. E a maior fonte de bagunça é o dado que muda sem aviso.</p></div>
+    <div class="corpo">
+      <div class="texto">
+        <p>Em 2011, <strong>Rich Hickey</strong>, criador do Clojure, deu a palestra <em>Simple Made Easy</em>, uma das mais citadas da área. A distinção central: <strong>simples</strong> é o oposto de entrelaçado, e é uma propriedade da estrutura. <strong>Fácil</strong> é o que está à mão, o que você já conhece, e depende de quem usa.</p>
+        <p>Muita escolha ruim nasce de confundir os dois: pegar o que é fácil, como a ferramenta conhecida ou o atalho, e acabar com um sistema trançado, em que não dá para mexer numa parte sem mexer em outra.</p>
+        <p>Cinco anos antes, Ben Moseley e Peter Marks escreveram <em>Out of the Tar Pit</em>. Eles discordam de Brooks e dizem que a maior parte da complexidade é <strong>acidental</strong>, e que a fonte número um é o <strong>estado mutável</strong>: o valor que muda e que você precisa rastrear em todas as combinações. A proposta deles é separar o estado, a lógica e o controle, usando funções puras e o modelo relacional.</p>
+        <p>O herói dessa proposta é o modelo relacional de Codd, o mesmo que está por trás de todo banco de dados SQL. Um SELECT bem escrito é código sem estado: entra dado, sai dado.</p>
+      </div>
+      <div class="margem">
+        <figure class="ilus">
+          <svg viewBox="0 0 300 190" role="img" aria-label="À esquerda, três fios trançados. À direita, três fios lado a lado">
+            <path d="M14 66 C38 66 38 126 62 126 S86 66 110 66 S134 126 140 126" class="lna"/>
+            <path d="M14 126 C38 126 38 66 62 66 S86 126 110 126 S134 66 140 66" class="ln"/>
+            <path d="M14 96 C34 80 44 112 62 96 S92 80 110 96 S130 112 140 96" class="lnm"/>
+            <path d="M168 66 H288" class="lna"/>
+            <path d="M168 96 H288" class="lnm"/>
+            <path d="M168 126 H288" class="ln"/>
+            <path d="M154 36 V156" class="dash"/>
+            <text x="77" y="30" text-anchor="middle" class="t-big">complexo</text>
+            <text x="77" y="166" text-anchor="middle" class="t-mu">entrelaçado</text>
+            <text x="228" y="30" text-anchor="middle" class="t-big">simples</text>
+            <text x="228" y="166" text-anchor="middle" class="t-mu">lado a lado</text>
+          </svg>
+          <figcaption>"Complect" vem do latim e significa trançar. Complexidade é trançar coisas que deveriam ser independentes.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <h3 class="quem-tit">Quem é quem</h3>
+    <ul class="quem">
+      <li><span class="pt ph-RH" role="img" aria-label="Rich Hickey"></span><div><h3>Rich Hickey</h3><span class="anos">EUA, criou o Clojure em 2007</span><p>Passou anos em sistemas comerciais antes de criar uma linguagem para fugir do estado mutável.</p></div></li>
+      <li><span class="pt sem">MM</span><div><h3>Ben Moseley e Peter Marks</h3><span class="anos">Reino Unido, 2006</span><p>Escreveram um artigo só, mas é dos mais lidos sobre complexidade. Propõem a programação funcional-relacional.</p></div></li>
+      <li><span class="pt ph-JB" role="img" aria-label="John Backus"></span><div><h3>John Backus</h3><span class="anos">1924–2007, EUA</span><p>Criou o Fortran e, na palestra do Turing de 1977, perguntou se a programação podia se libertar do estilo de von Neumann.</p></div></li>
+    </ul>
+    <div class="formulario" aria-label="Onde ler">
+      <div class="folha">
+        <p class="cab"><span>ONDE LER</span><span>CAP 4 / FL 01</span></p>
+        <ol>
+          <li><span class="ref">STRANGE LOOP</span><a href="https://www.infoq.com/presentations/Simple-Made-Easy/">Hickey, Simple Made Easy (vídeo)</a><span class="ano">2011</span></li>
+          <li><span class="ref">TRANSCRICAO</span><a href="https://github.com/matthiasn/talk-transcripts/blob/master/Hickey_Rich/SimpleMadeEasy.md">A mesma palestra, em texto</a><span class="ano">—</span></li>
+          <li><span class="ref">TAR PIT</span><a href="https://blog.acolyer.org/2015/03/20/out-of-the-tar-pit/">Moseley e Marks, resumo do artigo</a><span class="ano">2006</span></li>
+        </ol>
+        <p></p>
+      </div>
+    </div>
+    <div class="folio">4</div>
+  </div>
+</article>
+
+<!-- 5 -->
+<article class="materia" id="agil">
+  <div class="pagina">
+    <div class="corrido"><span>Mentes do Software</span><span>Ágil e XP</span></div>
+    <div class="abre"><span class="num">5</span><h2>Design que emerge</h2>
+      <p class="linha-fina">Em vez de desenhar tudo antes, dar passos pequenos, testar sempre e melhorar o desenho no caminho.</p></div>
+    <div class="corpo">
+      <div class="texto">
+        <p><strong>Kent Beck</strong> criou o Extreme Programming e popularizou o desenvolvimento guiado por testes. A ideia é que o design não precisa sair pronto no começo. Com passos pequenos e testes como rede de segurança, o desenho bom vai aparecendo enquanto você trabalha.</p>
+        <p>O lema atribuído a ele é fazer funcionar, depois fazer certo, depois fazer rápido, nessa ordem.</p>
+        <p>No livro <em>Tidy First?</em>, de 2023, Beck pergunta: antes de mexer num código, eu arrumo ou não? A resposta é econômica. Ele pesa quatro forças, que são custo, receita, acoplamento e coesão, e trata a flexibilidade como uma opção financeira: ela vale dinheiro porque o futuro é incerto. Arrumar o código vira uma decisão de negócio, não de estética.</p>
+        <p><strong>Martin Fowler</strong> deu nome e catálogo à <strong>refatoração</strong>: mudar a estrutura sem mudar o comportamento, um passo pequeno de cada vez. Ele também diz que a lição mais duradoura que tirou de Brooks é a integridade conceitual, assunto da reportagem 10.</p>
+      </div>
+      <div class="margem">
+        <figure class="ilus">
+          <svg viewBox="0 0 300 220" role="img" aria-label="Ciclo do TDD: o teste falha, passa, e o código é limpo">
+            <defs><marker id="seta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" style="fill:var(--tinta)"/></marker></defs>
+            <path d="M174 52 A78 78 0 0 1 226 150" class="ln" marker-end="url(#seta)"/>
+            <path d="M190 182 A78 78 0 0 1 110 182" class="ln" marker-end="url(#seta)"/>
+            <path d="M74 150 A78 78 0 0 1 126 52" class="ln" marker-end="url(#seta)"/>
+            <circle cx="150" cy="44" r="26" class="ac"/>
+            <circle cx="222" cy="172" r="26" class="ok"/>
+            <circle cx="78" cy="172" r="26" class="bx"/>
+            <text x="150" y="48" text-anchor="middle" class="inv">falha</text>
+            <text x="222" y="176" text-anchor="middle" class="inv">passa</text>
+            <text x="78" y="176" text-anchor="middle">limpa</text>
+            <text x="150" y="116" text-anchor="middle" class="t-big">passos</text>
+            <text x="150" y="134" text-anchor="middle" class="t-big">pequenos</text>
+          </svg>
+          <figcaption>O ciclo do TDD: escreva um teste que falha, faça passar do jeito mais simples, depois arrume o código.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <h3 class="quem-tit">Quem é quem</h3>
+    <ul class="quem">
+      <li><span class="pt ph-KB" role="img" aria-label="Kent Beck"></span><div><h3>Kent Beck</h3><span class="anos">1961, EUA</span><p>XP, TDD e o JUnit, com Erich Gamma. Um dos que assinaram o Manifesto Ágil, em 2001.</p></div></li>
+      <li><span class="pt ph-MF" role="img" aria-label="Martin Fowler"></span><div><h3>Martin Fowler</h3><span class="anos">1963, Reino Unido</span><p>Escreveu <em>Refactoring</em> e mantém há décadas um blog curto e didático sobre arquitetura.</p></div></li>
+    </ul>
+    <div class="formulario" aria-label="Onde ler">
+      <div class="folha">
+        <p class="cab"><span>ONDE LER</span><span>CAP 5 / FL 01</span></p>
+        <ol>
+          <li><span class="ref">BLIKI</span><a href="https://martinfowler.com/bliki/MythicalManMonth.html">Fowler sobre Brooks</a><span class="ano">—</span></li>
+          <li><span class="ref">O'REILLY</span><a href="https://hamvocke.com/blog/tidy-first-review">Beck, Tidy First? (resenha)</a><span class="ano">2023</span></li>
+        </ol>
+        <p></p>
+      </div>
+    </div>
+    <div class="folio">5</div>
+  </div>
+</article>
+
+<!-- 6 -->
+<article class="materia" id="debate">
+  <div class="pagina">
+    <div class="corrido"><span>Mentes do Software</span><span>O grande debate</span></div>
+    <div class="abre"><span class="num">6</span><h2>Funções pequenas ou módulos profundos?</h2>
+      <p class="linha-fina">Dois mestres, três discordâncias, tudo por escrito. A melhor aula desta edição sobre como pensar design.</p></div>
+    <div class="corpo">
+      <div class="texto">
+        <p><strong>John Ousterhout</strong> escreveu <em>A Philosophy of Software Design</em>, de 2018, a partir do curso que dá em Stanford. Ele resume tudo numa palavra: complexidade. O antídoto são os <strong>módulos profundos</strong>, com interface pequena e muito trabalho escondido atrás. Ele critica o que chama de classitis, a mania de criar dezenas de classes e funções minúsculas que só repassam a chamada adiante.</p>
+        <p>Isso bate de frente com <strong>Robert C. Martin</strong>, o Uncle Bob, autor de <em>Clean Code</em>, de 2008, que defende funções de poucas linhas e quase nenhum comentário.</p>
+        <p>Entre setembro de 2024 e fevereiro de 2025, os dois debateram, parte online e parte em pessoa, e publicaram tudo num repositório. Leia do começo ao fim. Você vê dois mestres discordando com argumentos e aprende que não existe regra absoluta.</p>
+        <p class="olho">Picar o código em pedacinhos não elimina a complexidade. Só a muda de lugar, para as conexões entre eles.<cite>John Ousterhout, no debate (paráfrase)</cite></p>
+      </div>
+      <div class="margem">
+        <figure class="ilus">
+          <svg viewBox="0 0 300 220" role="img" aria-label="Módulo profundo: interface estreita e corpo alto. Módulo raso: interface larga e corpo baixo">
+            <rect x="34" y="36" width="70" height="10" class="ac"/>
+            <rect x="34" y="46" width="70" height="142" class="rl"/>
+            <rect x="158" y="36" width="130" height="10" class="ac"/>
+            <rect x="158" y="46" width="130" height="34" class="rl"/>
+            <text x="69" y="26" text-anchor="middle" class="t-ac">interface</text>
+            <text x="223" y="26" text-anchor="middle" class="t-ac">interface</text>
+            <text x="69" y="118" text-anchor="middle">função</text>
+            <text x="69" y="134" text-anchor="middle">escondida</text>
+            <text x="69" y="210" text-anchor="middle" class="t-big">profundo</text>
+            <text x="223" y="104" text-anchor="middle" class="t-big">raso</text>
+            <text x="223" y="122" text-anchor="middle" class="t-mu">mostra quase tudo</text>
+            <text x="223" y="138" text-anchor="middle" class="t-mu">o que faz</text>
+          </svg>
+          <figcaption>O bom módulo tem interface pequena e muita coisa escondida atrás. O ruim é quase todo interface.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="debate">
+      <div>
+        <h3>John Ousterhout</h3>
+        <dl>
+          <div><dt>Tamanho de método</dt><dd>O que importa é a profundidade. Uma função maior e coesa pode ser melhor que cinco pequenas e acopladas.</dd></div>
+          <div><dt>Comentários</dt><dd>São essenciais. O porquê de uma decisão não cabe no código.</dd></div>
+          <div><dt>TDD</dt><dd>Testar, sim. Mas escrever o teste antes de tudo empurra para o design tático, de curto prazo.</dd></div>
+        </dl>
+      </div>
+      <div>
+        <h3>Robert C. Martin</h3>
+        <dl>
+          <div><dt>Tamanho de método</dt><dd>Funções curtas, que fazem uma coisa só, com nomes que explicam.</dd></div>
+          <div><dt>Comentários</dt><dd>Se precisa de comentário, o código não conseguiu se explicar.</dd></div>
+          <div><dt>TDD</dt><dd>Teste primeiro, em ciclos curtos, é a base de tudo.</dd></div>
+        </dl>
+      </div>
+    </div>
+    <h3 class="quem-tit">Quem é quem</h3>
+    <ul class="quem">
+      <li><span class="pt ph-JO" role="img" aria-label="John Ousterhout"></span><div><h3>John Ousterhout</h3><span class="anos">1954, EUA</span><p>Criou a linguagem Tcl e é coautor do algoritmo de consenso Raft. Professor em Stanford.</p></div></li>
+      <li><span class="pt ph-RM" role="img" aria-label="Robert C. Martin"></span><div><h3>Robert C. Martin</h3><span class="anos">1952, EUA</span><p>Popularizou os princípios SOLID e a Clean Architecture. Também assinou o Manifesto Ágil.</p></div></li>
+    </ul>
+    <div class="formulario" aria-label="Onde ler">
+      <div class="folha">
+        <p class="cab"><span>ONDE LER</span><span>CAP 6 / FL 01</span></p>
+        <ol>
+          <li><span class="ref">GITHUB</span><a href="https://github.com/johnousterhout/aposd-vs-clean-code">O debate completo, por escrito</a><span class="ano">2025</span></li>
+          <li><span class="ref">STANFORD CS190</span><a href="https://web.stanford.edu/class/cs190">O curso de Ousterhout</a><span class="ano">—</span></li>
+          <li><span class="ref">APOSD</span><a href="https://stanford.edu/~ouster/cgi-bin/aposd.php">A Philosophy of Software Design</a><span class="ano">2018</span></li>
+        </ol>
+        <p></p>
+      </div>
+    </div>
+    <div class="folio">6</div>
+  </div>
+</article>
+
+<!-- 7 -->
+<article class="materia" id="dados">
+  <div class="pagina">
+    <div class="corrido"><span>Mentes do Software</span><span>Data-Oriented Design</span></div>
+    <div class="abre"><span class="num">7</span><h2>O hardware existe</h2>
+      <p class="linha-fina">O programa não roda numa abstração. Roda numa máquina com memória, cache e limites.</p></div>
+    <div class="corpo">
+      <div class="texto">
+        <p>Esta escola vem dos jogos, onde cada milissegundo conta. <strong>Mike Acton</strong>, diretor de engine da Insomniac Games, abriu a CppCon de 2014 com uma ideia simples: o trabalho de um programa é transformar dados, numa máquina real. Abstrações que ignoram como a memória funciona custam caro.</p>
+        <p>Em 2023, <strong>Casey Muratori</strong> publicou <em>Clean Code, Horrible Performance</em>. Ele pegou regras do Clean Code, como trocar o switch por polimorfismo e quebrar tudo em funções minúsculas, e mediu. Segundo ele, o código que seguia as regras chegou a ficar mais de 15 vezes mais lento. O texto gerou um debate enorme.</p>
+        <p>A crítica justa a Muratori é que essa diferença pesa muito em jogos e simulações, e bem menos em sistema de negócio, onde o gargalo costuma ser o banco ou a rede.</p>
+        <p>Mesmo assim, a lição serve para você: <strong>meça antes de opinar</strong>. Num banco de dados, medir é olhar o plano de execução da consulta.</p>
+      </div>
+      <div class="margem">
+        <figure class="ilus">
+          <svg viewBox="0 0 300 200" role="img" aria-label="Array de structs com cores misturadas, comparado a struct de arrays com cores agrupadas e uma linha de cache">
+            <text x="4" y="24">array de structs</text>
+            <g transform="translate(4,32)">
+              <rect x="0" width="23" height="23" class="ac"/><rect x="24" width="23" height="23" class="mu"/><rect x="48" width="23" height="23" class="rl"/>
+              <rect x="72" width="23" height="23" class="ac"/><rect x="96" width="23" height="23" class="mu"/><rect x="120" width="23" height="23" class="rl"/>
+              <rect x="144" width="23" height="23" class="ac"/><rect x="168" width="23" height="23" class="mu"/><rect x="192" width="23" height="23" class="rl"/>
+              <rect x="216" width="23" height="23" class="ac"/><rect x="240" width="23" height="23" class="mu"/><rect x="264" width="23" height="23" class="rl"/>
+            </g>
+            <text x="4" y="100">struct de arrays</text>
+            <g transform="translate(4,108)">
+              <rect x="0" width="23" height="23" class="ac"/><rect x="24" width="23" height="23" class="ac"/><rect x="48" width="23" height="23" class="ac"/><rect x="72" width="23" height="23" class="ac"/>
+              <rect x="96" width="23" height="23" class="mu"/><rect x="120" width="23" height="23" class="mu"/><rect x="144" width="23" height="23" class="mu"/><rect x="168" width="23" height="23" class="mu"/>
+              <rect x="192" width="23" height="23" class="rl"/><rect x="216" width="23" height="23" class="rl"/><rect x="240" width="23" height="23" class="rl"/><rect x="264" width="23" height="23" class="rl"/>
+            </g>
+            <path d="M4 140 V148 H99 V140" class="lna"/>
+            <text x="4" y="168" class="t-ac">uma leitura da memória traz</text>
+            <text x="4" y="184" class="t-ac">só o campo que você usa</text>
+          </svg>
+          <figcaption>Quando você só precisa de um campo, guardar os dados do mesmo tipo juntos faz o processador ler muito menos.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <h3 class="quem-tit">Quem é quem</h3>
+    <ul class="quem">
+      <li><span class="pt sem">MA</span><div><h3>Mike Acton</h3><span class="anos">EUA, Insomniac Games e depois Unity</span><p>A principal voz do data-oriented design. Resume o trabalho como transformar dados de forma eficiente.</p></div></li>
+      <li><span class="pt sem">CM</span><div><h3>Casey Muratori</h3><span class="anos">EUA, Handmade Hero</span><p>Programou uma engine de jogo inteira ao vivo, do zero. Hoje ensina desempenho no curso Computer Enhance.</p></div></li>
+    </ul>
+    <div class="formulario" aria-label="Onde ler">
+      <div class="folha">
+        <p class="cab"><span>ONDE LER</span><span>CAP 7 / FL 01</span></p>
+        <ol>
+          <li><span class="ref">CPPCON 2014</span><a href="https://isocpp.org/blog/2015/01/cppcon-2014-data-oriented-design-and-c-mike-acton">Acton, Data-Oriented Design and C++</a><span class="ano">2014</span></li>
+          <li><span class="ref">SE RADIO 577</span><a href="https://se-radio.net/2023/08/se-radio-577-casey-muratori-on-clean-code-horrible-performance/">Muratori, entrevista em áudio</a><span class="ano">2023</span></li>
+        </ol>
+        <p></p>
+      </div>
+    </div>
+    <div class="folio">7</div>
+  </div>
+</article>
+
+<!-- 8 -->
+<article class="materia" id="ddd">
+  <div class="pagina">
+    <div class="corrido"><span>Mentes do Software</span><span>Domain-Driven Design</span></div>
+    <div class="abre"><span class="num">8</span><h2>O negócio no centro</h2>
+      <p class="linha-fina">O código deve falar a língua de quem usa o sistema, e cada palavra vale dentro de uma fronteira.</p></div>
+    <div class="corpo">
+      <div class="texto">
+        <p><strong>Eric Evans</strong> publicou <em>Domain-Driven Design</em> em 2003. O livro parte de uma observação: os sistemas mais difíceis não são difíceis pela tecnologia, e sim pelo negócio.</p>
+        <p>A primeira ideia é a <strong>linguagem ubíqua</strong>: programadores e pessoas do negócio usam as mesmas palavras, e essas palavras aparecem no código. Se o comercial fala "orçamento" e o código fala "pedido_temp", alguém vai se confundir.</p>
+        <p>A segunda é o <strong>contexto delimitado</strong>, o bounded context. Tentar um modelo único de cliente que sirva para venda, cobrança e logística gera uma tabela monstro. É melhor aceitar que cada área tem seu modelo e traduzir na fronteira.</p>
+        <p>Muita empresa já faz isso sem dar o nome: separa o banco em áreas, como vendas e financeiro. Cada área é, na prática, um contexto.</p>
+      </div>
+      <div class="margem">
+        <figure class="ilus">
+          <svg viewBox="0 0 300 210" role="img" aria-label="Dois contextos, Comercial e Financeiro, cada um com seu próprio significado de Cliente">
+            <rect x="4" y="28" width="124" height="150" class="bx"/>
+            <rect x="172" y="28" width="124" height="150" class="bx"/>
+            <text x="66" y="52" text-anchor="middle" class="t-big">Comercial</text>
+            <text x="234" y="52" text-anchor="middle" class="t-big">Financeiro</text>
+            <rect x="22" y="68" width="88" height="28" class="ac"/>
+            <rect x="190" y="68" width="88" height="28" class="ac"/>
+            <text x="66" y="86" text-anchor="middle" class="inv">Cliente</text>
+            <text x="234" y="86" text-anchor="middle" class="inv">Cliente</text>
+            <text x="66" y="120" text-anchor="middle" class="t-mu">carrinho</text>
+            <text x="66" y="136" text-anchor="middle" class="t-mu">vendedor</text>
+            <text x="66" y="152" text-anchor="middle" class="t-mu">margem</text>
+            <text x="234" y="120" text-anchor="middle" class="t-mu">limite</text>
+            <text x="234" y="136" text-anchor="middle" class="t-mu">títulos</text>
+            <text x="234" y="152" text-anchor="middle" class="t-mu">boletos</text>
+            <path d="M128 102 H172" class="lna"/>
+            <text x="150" y="200" text-anchor="middle" class="t-ac">tradução na fronteira</text>
+          </svg>
+          <figcaption>"Cliente" no comercial e no financeiro podem ser coisas diferentes, desde que cada um viva no seu contexto.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <h3 class="quem-tit">Quem é quem</h3>
+    <ul class="quem">
+      <li><span class="pt sem">EE</span><div><h3>Eric Evans</h3><span class="anos">EUA, Domain Language</span><p>Consultor que passou anos em sistemas de negócio grandes. O "livro azul" dele virou referência de arquitetura.</p></div></li>
+    </ul>
+    <div class="formulario" aria-label="Onde ler">
+      <div class="folha">
+        <p class="cab"><span>ONDE LER</span><span>CAP 8 / FL 01</span></p>
+        <ol>
+          <li><span class="ref">CC BY 4.0</span><a href="https://domainlanguage.com/ddd/reference/">Evans, DDD Reference (grátis)</a><span class="ano">—</span></li>
+        </ol>
+        <p></p>
+      </div>
+    </div>
+    <div class="folio">8</div>
+  </div>
+</article>
+
+<!-- 9 -->
+<article class="materia" id="erlang">
+  <div class="pagina">
+    <div class="corrido"><span>Mentes do Software</span><span>Erlang</span></div>
+    <div class="abre"><span class="num">9</span><h2>Sistemas que não caem</h2>
+      <p class="linha-fina">Partir da premissa honesta de que vai ter erro, e construir algo confiável mesmo assim.</p></div>
+    <div class="corpo">
+      <div class="texto">
+        <p>Na Ericsson, os sistemas de telefonia não podiam parar. <strong>Joe Armstrong</strong> e colegas criaram o Erlang para isso. A tese de doutorado dele, de 2003, parte da premissa de que o software <strong>vai</strong> ter erros. A pergunta não é como evitar todo erro, e sim como construir algo confiável mesmo assim.</p>
+        <p>A resposta é ter processos pequenos e isolados, que não dividem memória e só conversam por mensagem, como em Kay. Quando um processo dá erro, ele morre, e outro processo, o supervisor, o reinicia do zero. A filosofia ficou conhecida como "let it crash", deixe cair.</p>
+        <p>Armstrong lembra que duplicar o servidor protege contra falha de hardware, mas não de software: se o código tem um erro, a cópia tem o mesmo erro.</p>
+        <p>Ele chamou a tese de "a documentação que faltava do Erlang", porque ela explica o porquê das decisões, e não só o como. É a teoria de Naur de novo.</p>
+      </div>
+      <div class="margem">
+        <figure class="ilus">
+          <svg viewBox="0 0 300 200" role="img" aria-label="Árvore de supervisão: um supervisor no topo, três processos abaixo, um deles caiu e é reiniciado">
+            <path d="M150 56 L62 128 M150 56 V128 M150 56 L238 128" class="ln"/>
+            <circle cx="150" cy="42" r="22" class="ac"/>
+            <text x="150" y="46" text-anchor="middle" class="inv">sup</text>
+            <circle cx="62" cy="146" r="20" class="bx"/>
+            <circle cx="150" cy="146" r="20" class="bx"/>
+            <circle cx="238" cy="146" r="20" class="bx"/>
+            <path d="M140 136 L160 156 M160 136 L140 156" class="lna"/>
+            <path d="M176 136 C200 106 190 76 168 60" class="dash"/>
+            <text x="212" y="92" class="t-ac">reinicia</text>
+            <text x="62" y="184" text-anchor="middle" class="t-mu">ok</text>
+            <text x="150" y="184" text-anchor="middle" class="t-ac">caiu</text>
+            <text x="238" y="184" text-anchor="middle" class="t-mu">ok</text>
+          </svg>
+          <figcaption>Cada processo é isolado. Quando um cai, o supervisor o reinicia, e o resto do sistema nem percebe.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <h3 class="quem-tit">Quem é quem</h3>
+    <ul class="quem">
+      <li><span class="pt ph-JA" role="img" aria-label="Joe Armstrong"></span><div><h3>Joe Armstrong</h3><span class="anos">1950–2019, Reino Unido e Suécia</span><p>Cocriador do Erlang. As ideias dele inspiraram o Akka, o Elixir e o modelo de atores moderno.</p></div></li>
+    </ul>
+    <div class="formulario" aria-label="Onde ler">
+      <div class="folha">
+        <p class="cab"><span>ONDE LER</span><span>CAP 9 / FL 01</span></p>
+        <ol>
+          <li><span class="ref">KTH TESE</span><a href="https://mirror.its.dal.ca/freebsd/distfiles/erlang-doc/r13/armstrong_thesis_2003.pdf">Armstrong, Making Reliable Distributed Systems</a><span class="ano">2003</span></li>
+        </ol>
+        <p></p>
+      </div>
+    </div>
+    <div class="folio">9</div>
+  </div>
+</article>
+
+<!-- 10 -->
+<article class="materia" id="humano">
+  <div class="pagina">
+    <div class="corrido"><span>Mentes do Software</span><span>O lado humano</span></div>
+    <div class="abre"><span class="num">10</span><h2>Software é feito por gente</h2>
+      <p class="linha-fina">A estrutura do sistema copia a estrutura de quem o constrói. E nove mulheres não fazem um bebê em um mês.</p></div>
+    <div class="corpo">
+      <div class="texto">
+        <p><strong>Fred Brooks</strong> gerenciou o OS/360 da IBM, um dos maiores projetos de software dos anos 60, e escreveu o que aprendeu em <em>The Mythical Man-Month</em>, de 1975. A lição mais famosa: colocar mais gente num projeto atrasado o atrasa ainda mais, porque cada pessoa nova precisa aprender e conversar com as outras.</p>
+        <p>A lição que ele considerava mais importante é a <strong>integridade conceitual</strong>. É melhor um sistema com menos funções e uma ideia coerente do que um com muitas boas ideias desencontradas. Em 1986, com <em>No Silver Bullet</em>, ele separou a complexidade essencial, a do problema, da acidental, a das ferramentas, e disse que nenhuma ferramenta vai multiplicar por dez a produtividade.</p>
+        <p><strong>Melvin Conway</strong> observou em 1968 que o sistema copia a estrutura de comunicação da organização que o constrói. A Harvard Business Review recusou o artigo por falta de prova. Brooks o batizou de Lei de Conway, e pesquisas posteriores confirmaram o espelhamento.</p>
+        <p>Para fechar com humor: Carson Gross, criador do htmx, escreveu em 2022 o <em>Grug Brained Developer</em>, como se fosse um programador das cavernas. Para o Grug, a complexidade é o maior predador, e a melhor arma contra ela é a palavra "não". Tem críticos, que lembram que parte da complexidade vem do negócio real, mas é leitura divertida e certeira.</p>
+      </div>
+      <div class="margem">
+        <figure class="ilus">
+          <svg viewBox="0 0 300 210" role="img" aria-label="Lei de Conway: três equipes com as mesmas ligações dos três componentes do sistema">
+            <text x="62" y="22" text-anchor="middle" class="t-big">equipes</text>
+            <text x="238" y="22" text-anchor="middle" class="t-big">sistema</text>
+            <path d="M62 58 L24 148 M62 58 L100 148" class="ln"/>
+            <circle cx="62" cy="54" r="15" class="ac"/>
+            <circle cx="24" cy="152" r="15" class="ac"/>
+            <circle cx="100" cy="152" r="15" class="ac"/>
+            <path d="M238 62 L198 144 M238 62 L278 144" class="ln"/>
+            <rect x="216" y="40" width="44" height="28" class="bx"/>
+            <rect x="176" y="138" width="44" height="28" class="bx"/>
+            <rect x="256" y="138" width="40" height="28" class="bx"/>
+            <path d="M128 104 H170" class="lna"/>
+            <text x="149" y="94" text-anchor="middle" class="t-ac">espelha</text>
+            <text x="62" y="196" text-anchor="middle" class="t-mu">B e C não conversam</text>
+            <text x="236" y="196" text-anchor="middle" class="t-mu">B e C não se integram</text>
+          </svg>
+          <figcaption>Se duas equipes não conversam, as partes que elas constroem também não vão se encaixar.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <h3 class="quem-tit">Quem é quem</h3>
+    <ul class="quem">
+      <li><span class="pt ph-FB" role="img" aria-label="Fred Brooks"></span><div><h3>Fred Brooks</h3><span class="anos">1931–2022, EUA</span><p>Gerente do System/360 e do OS/360 na IBM. Prêmio Turing em 1999.</p></div></li>
+      <li><span class="pt sem">MC</span><div><h3>Melvin Conway</h3><span class="anos">EUA, 1968</span><p>Programador que, num artigo recusado pela Harvard, descreveu uma das leis mais citadas da área.</p></div></li>
+      <li><span class="pt ph-PN" role="img" aria-label="Peter Naur"></span><div><h3>Peter Naur</h3><span class="anos">1928–2016, Dinamarca</span><p>Algol 60 e a notação BNF. Prêmio Turing em 2005, e autor da tese que abre esta edição.</p></div></li>
+      <li><span class="pt sem">CG</span><div><h3>Carson Gross</h3><span class="anos">EUA, htmx</span><p>Defende a web simples, com o HTML no centro. O Grug é o manifesto anticomplexidade dele.</p></div></li>
+    </ul>
+    <div class="formulario" aria-label="Onde ler">
+      <div class="folha">
+        <p class="cab"><span>ONDE LER</span><span>CAP 10 / FL 01</span></p>
+        <ol>
+          <li><span class="ref">UNC TR86-020</span><a href="https://techreports.cs.unc.edu/papers/86-020.pdf">Brooks, No Silver Bullet</a><span class="ano">1986</span></li>
+          <li><span class="ref">DATAMATION</span><a href="https://blog.acolyer.org/2019/12/13/how-do-committees-invent/">Conway, How Do Committees Invent? (resumo)</a><span class="ano">1968</span></li>
+          <li><span class="ref">NAUR 1985</span><a href="https://neonvagabond.xyz/mirrors/naur1985programming.html">Naur, Programming as Theory Building</a><span class="ano">1985</span></li>
+          <li><span class="ref">GRUGBRAIN</span><a href="https://grugbrain.dev/">Gross, The Grug Brained Developer</a><span class="ano">2022</span></li>
+        </ol>
+        <p></p>
+      </div>
+    </div>
+    <div class="folio">10</div>
+  </div>
+</article>
+
+<!-- SÍNTESE -->
+<section class="secao" id="sintese">
+  <div class="pagina">
+    <h2>Onde concordam e onde brigam</h2>
+    <p class="linha-fina">Dez escolas, um inimigo em comum. As brigas estão no remédio, não no diagnóstico.</p>
+    <div class="tabela">
+      <table>
+        <thead><tr><th>Quase todos concordam</th><th>Onde há briga</th></tr></thead>
+        <tbody>
+          <tr><td>Complexidade é o inimigo número um</td><td>Funções pequenas (Martin) ou módulos profundos (Ousterhout)?</td></tr>
+          <tr><td>Esconda o que pode mudar (Parnas)</td><td>Comentar (Ousterhout) ou deixar o código falar sozinho (Martin)?</td></tr>
+          <tr><td>Os dados vêm antes do algoritmo (Pike)</td><td>Abstração limpa ou desempenho (Muratori)?</td></tr>
+          <tr><td>Pense antes de codar</td><td>Projetar antes (Lamport) ou deixar o design emergir (Beck)?</td></tr>
+          <tr><td>Coerência do todo (Brooks)</td><td>Fazer a coisa certa (MIT) ou o simples que funciona (New Jersey)?</td></tr>
+          <tr><td>Partes isoladas que conversam por mensagem (Kay, Armstrong)</td><td>A maior parte da complexidade é essencial (Brooks) ou acidental (Moseley e Marks)?</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="triade">
+      <div>
+        <h3>Estrutura</h3>
+        <p class="sub">Como dividir</p>
+        <ul>
+          <li>Corte pelo que pode mudar (Parnas)</li>
+          <li>Não trance o que é independente (Hickey)</li>
+          <li>Fronteiras alinhadas ao negócio (Evans) e às equipes (Conway)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Forma</h3>
+        <p class="sub">Como se apresenta</p>
+        <ul>
+          <li>Interface pequena, muita coisa escondida atrás (Ousterhout)</li>
+          <li>Vocabulário do negócio no código (Evans)</li>
+          <li>Uma ideia coerente no sistema todo (Brooks)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Conteúdo</h3>
+        <p class="sub">O que decide</p>
+        <ul>
+          <li>Dados primeiro (Pike)</li>
+          <li>O mínimo de estado mutável (Moseley e Marks)</li>
+          <li>Erros previstos no desenho (Armstrong)</li>
+          <li>O porquê registrado (Naur)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIBLIOTECA -->
+<section class="secao" id="biblioteca">
+  <div class="pagina">
+    <h2>Onde estudar</h2>
+    <p class="linha-fina">Quase tudo aqui é gratuito e oficial. Comece pelo livro em português.</p>
+    <div class="biblio">
+      <section>
+        <h3>Para começar</h3>
+        <ul>
+          <li><a href="https://engsoftmoderna.info/">Engenharia de Software Moderna</a>, Marco Tulio Valente, UFMG. <span class="pt-br">Em português, grátis.</span> Livro completo sobre princípios de design, padrões, testes e arquitetura.</li>
+          <li><a href="https://grugbrain.dev/">The Grug Brained Developer</a>, Carson Gross. Leitura de uma tarde.</li>
+          <li><a href="https://github.com/johnousterhout/aposd-vs-clean-code">O debate Ousterhout e Martin</a>. Dois mestres discordando com argumentos.</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Cursos abertos</h3>
+        <ul>
+          <li><a href="https://ocw.mit.edu/ans7870/6/6.005/s16/">MIT 6.005, Software Construction</a>. 27 leituras sobre especificação, testes, tipos abstratos e concorrência.</li>
+          <li><a href="https://web.stanford.edu/class/cs190">Stanford CS 190</a>. O curso de Ousterhout: a matrícula é fechada, mas as leituras são abertas.</li>
+          <li><a href="https://gwern.net/sicp/introduction">SICP</a>. O "livro do mago" do MIT, com aulas em vídeo. É denso: leia devagar.</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Para ler código de verdade</h3>
+        <ul>
+          <li><a href="https://aosabook.org/en/500L/introduction.html">500 Lines or Less</a>. Programas de até 500 linhas, como um interpretador e um crawler, com as decisões explicadas.</li>
+          <li><a href="https://aosabook.org/en/">The Architecture of Open Source Applications</a>. Os próprios autores explicam o design de projetos reais.</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Artigos clássicos</h3>
+        <ul>
+          <li><a href="https://apps.dtic.mil/sti/tr/pdf/AD0773837.pdf">Parnas, 1972</a>. Módulos e ocultação de informação.</li>
+          <li><a href="https://techreports.cs.unc.edu/papers/86-020.pdf">Brooks, No Silver Bullet</a>. Complexidade essencial e acidental.</li>
+          <li><a href="https://dreamsongs.com/RiseOfWorseIsBetter.html">Gabriel, Worse is Better</a>. MIT contra New Jersey.</li>
+          <li><a href="https://neonvagabond.xyz/mirrors/naur1985programming.html">Naur, Programming as Theory Building</a>.</li>
+          <li><a href="https://github.com/papers-we-love/papers-we-love">Papers We Love</a>. Diretório com centenas de outros.</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Palestras</h3>
+        <ul>
+          <li><a href="https://www.infoq.com/presentations/Simple-Made-Easy/">Hickey, Simple Made Easy</a>, 2011.</li>
+          <li><a href="https://www.microsoft.com/en-us/research/video/thinking-for-programmers/">Lamport, Thinking Above the Code</a>.</li>
+          <li><a href="https://isocpp.org/blog/2015/01/cppcon-2014-data-oriented-design-and-c-mike-acton">Acton, Data-Oriented Design and C++</a>, 2014.</li>
+          <li><a href="https://se-radio.net/2023/08/se-radio-577-casey-muratori-on-clean-code-horrible-performance/">Muratori no SE Radio 577</a>, em áudio.</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Livros pagos que valem</h3>
+        <ul>
+          <li><em>A Philosophy of Software Design</em>, Ousterhout. Curto e prático, sem edição em português.</li>
+          <li><em>The Mythical Man-Month</em>, Brooks.</li>
+          <li><em>Tidy First?</em>, Kent Beck.</li>
+          <li><em>The Pragmatic Programmer</em>, Hunt e Thomas.</li>
+          <li><em>Designing Data-Intensive Applications</em>, Kleppmann. Para quando quiser a visão de sistemas e bancos.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- TRILHA -->
+<section class="secao" id="trilha">
+  <div class="pagina">
+    <h2>Sete semanas de leitura</h2>
+    <p class="linha-fina">Umas três horas por semana, do mais acessível ao mais denso.</p>
+    <ol class="trilha">
+      <li><span class="sem">Semanas 1 e 2</span><div><h4>Engenharia de Software Moderna</h4><p>Os capítulos de princípios de design. Em português, para ganhar o vocabulário.</p></div></li>
+      <li><span class="sem">Semana 3</span><div><h4>Parnas e Naur</h4><p>Dois artigos curtos que são a fundação de tudo.</p></div></li>
+      <li><span class="sem">Semana 4</span><div><h4>Simple Made Easy e Out of the Tar Pit</h4><p>Veja a palestra, depois leia o resumo do artigo.</p></div></li>
+      <li><span class="sem">Semana 5</span><div><h4>Worse is Better e as regras de Pike</h4><p>A briga entre fazer o certo e fazer o simples.</p></div></li>
+      <li><span class="sem">Semana 6</span><div><h4>O debate Ousterhout e Martin</h4><p>Do começo ao fim. Anote de que lado você fica em cada tema, e por quê.</p></div></li>
+      <li><span class="sem">Semana 7</span><div><h4>Muratori e Acton</h4><p>O outro lado: o que a máquina faz com o seu código.</p></div></li>
+      <li><span class="sem">Depois</span><div><h4>Um capítulo do 500 Lines por semana</h4><p>Leia o código e depois reescreva sozinho. É a parte que mais ensina. Em paralelo, as leituras do MIT 6.005.</p></div></li>
+    </ol>
+    <div class="exercicio">
+      <h3>O exercício que transforma leitura em critério</h3>
+      <p>A cada autor, abra um código seu, como uma função, um módulo ou uma tela, e pergunte o que essa pessoa diria dele. Que segredo esse módulo esconde? O que está trançado aqui? Onde está o estado? Escreva a resposta em três linhas. Em sete semanas você terá uma teoria própria, do jeito que Naur descreve.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="expediente">
+  <div class="pagina">
+    <h2>Expediente</h2>
+    <p>Os retratos sem foto livre disponível (Gabriel, Dahl e Nygaard, Moseley e Marks, Acton, Muratori, Evans, Conway e Gross) aparecem só com as iniciais. Os trechos em destaque são paráfrases, a não ser a regra de Pike, citada literalmente. Datas e fatos vieram de buscas na web em outubro de 2026, em boa parte de resumos, e não dos textos originais. Confira no original antes de citar alguém.</p>
+    <p>Fotos: Wikimedia Commons, todas com licença livre. Recortadas e em preto e branco. Passe o mouse para ver a cor original.</p>
+    <ul class="creditos"><li>Edsger Dijkstra: <a href="https://commons.wikimedia.org/wiki/File:Edsger_Wybe_Dijkstra.jpg">Hamilton Richards</a>, CC BY-SA 3.0</li><li>David Parnas: <a href="https://commons.wikimedia.org/wiki/File:David_Parnas.jpg">Hubert Baumeister</a>, CC BY-SA 3.0</li><li>Tony Hoare: <a href="https://commons.wikimedia.org/wiki/File:Sir_Tony_Hoare_IMG_5125.jpg">Rama</a>, CC BY-SA 2.0 fr</li><li>Leslie Lamport: <a href="https://commons.wikimedia.org/wiki/File:Leslie_Lamport.jpg">Leslie Lamport</a>, Copyrighted free use</li><li>Ken Thompson: <a href="https://commons.wikimedia.org/wiki/File:Ken_Thompson,_2019.jpg">A.C.Diller</a>, CC BY-SA 4.0</li><li>Dennis Ritchie: <a href="https://commons.wikimedia.org/wiki/File:Dennis_Ritchie_2011.jpg">Denise Panyik-Dale</a>, CC BY 2.0</li><li>Rob Pike: <a href="https://commons.wikimedia.org/wiki/File:Rob-pike-oscon.jpg">Kevin Shockey</a>, CC BY 2.0</li><li>Alan Kay: <a href="https://commons.wikimedia.org/wiki/File:Alan_Kay_and_the_prototype_of_the_Dynabook_(3009206205).jpg">Marcin Wichary from San Francisco, U.S.A.</a>, CC BY 2.0</li><li>Rich Hickey: <a href="https://commons.wikimedia.org/wiki/File:Rich_Hickey.jpg">Tapestry Dude</a>, CC BY-SA 2.0</li><li>John Backus: <a href="https://commons.wikimedia.org/wiki/File:John_Backus_2.jpg">PIerre.Lescanne</a>, CC BY-SA 4.0</li><li>Kent Beck: <a href="https://commons.wikimedia.org/wiki/File:Kent_Beck_no_Workshop_Mapping_XP.jpg">Improve It</a>, CC BY-SA 2.0</li><li>Martin Fowler: <a href="https://commons.wikimedia.org/wiki/File:Webysther_20150414193208_-_Martin_Fowler.jpg">Webysther Nunes</a>, CC BY-SA 4.0</li><li>John Ousterhout: <a href="https://commons.wikimedia.org/wiki/File:Ouster_face.png">John Ousterhout</a>, Tcl/Tk</li><li>Robert C. Martin: <a href="https://commons.wikimedia.org/wiki/File:Robert_C._Martin_surrounded_by_computers_(cropped).jpg">Angelacleancoder</a>, CC BY-SA 4.0</li><li>Joe Armstrong: <a href="https://commons.wikimedia.org/wiki/File:An_erlang_expert_and_some_guy_named_Joe_(4133214882).jpg">Måns Sandström from Stockholm, Sweden</a>, CC BY 2.0</li><li>Fred Brooks: <a href="https://commons.wikimedia.org/wiki/File:Fred_Brooks_(cropped_square).jpg">Copyright owned by SD&amp;amp;M (www.sdm.de)</a>, CC BY-SA 3.0</li><li>Peter Naur: <a href="https://commons.wikimedia.org/wiki/File:Peternaur.JPG">The original uploader was Eriktj at English Wikipedia.</a>, CC BY-SA 3.0</li></ul>
+    <p>Fontes principais:</p>
+    <ul>
+      <li><a href="https://github.com/johnousterhout/aposd-vs-clean-code">johnousterhout/aposd-vs-clean-code</a></li>
+      <li><a href="https://dreamsongs.com/RiseOfWorseIsBetter.html">dreamsongs.com, Worse is Better</a></li>
+      <li><a href="https://lists.squeakfoundation.org/pipermail/squeak-dev/1998-October/017019.html">Lista do Squeak, outubro de 1998</a></li>
+      <li><a href="https://computerhistory.org/blog/in-memoriam-sir-antony-hoare-1934-2026/">Computer History Museum, sobre Hoare</a></li>
+      <li><a href="https://martinfowler.com/bliki/MythicalManMonth.html">Fowler, Mythical Man-Month</a></li>
+      <li><a href="https://engsoftmoderna.info/">engsoftmoderna.info</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var bar=document.querySelector('#prog i');
+  function upd(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    bar.style.width=(max>0?(h.scrollTop/max*100):0)+'%';
+  }
+  window.addEventListener('scroll',upd,{passive:true});
+  upd();
+})();
+</script>
+</body>
+</html>
