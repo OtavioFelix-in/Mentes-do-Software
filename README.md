@@ -18,7 +18,7 @@ Revista em HTML sobre as escolas de pensamento do design de software. A edição
 
 | # | Reportagem | Quem |
 |---|---|---|
-| 1 | Pensar antes de codar | Dijkstra, Parnas, Hoare, Lamport |
+| 1 | Pensar antes de codar | Dijkstra, Parnas, Liskov, Hoare, Lamport |
 | 2 | Pequeno, simples, combinável | Thompson, Ritchie, Pike, Gabriel |
 | 3 | Objetos que conversam | Alan Kay |
 | 4 | O estado é o vilão | Hickey, Moseley e Marks, Backus |
