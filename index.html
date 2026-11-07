@@ -130,7 +130,7 @@
     <div class="corpo">
       <div class="texto">
         <p>No fim dos anos 60, o software já era grande demais para caber na cabeça de uma pessoa. A resposta desta escola foi a disciplina: se a mente é limitada, o programa tem que ser organizado para caber nela.</p>
-        <p><strong>Dijkstra</strong> deu nome à ideia central, a <strong>separação de preocupações</strong>: estudar um aspecto do problema de cada vez, sabendo que os outros existem. Anos depois ele mesmo criticou o slogan. Separar é fácil. O difícil é saber onde cortar e como juntar de novo.</p>
+        <p><strong>Dijkstra</strong> deu nome à ideia central, a <strong>separação de preocupações</strong>: estudar um aspecto do problema de cada vez, sabendo que os outros existem. Separar é fácil. O difícil é saber onde cortar e como juntar de novo.</p>
         <p><strong>Parnas</strong> respondeu onde cortar. No artigo de 1972, ele divide o mesmo sistema de dois jeitos. O primeiro segue os passos do fluxo: ler, processar, gravar. O segundo divide pelas <strong>decisões que podem mudar</strong>, e cada módulo esconde uma delas. O segundo aguenta muito melhor a mudança, e é dele que vem o encapsulamento que você usa hoje.</p>
         <p><strong>Barbara Liskov</strong> levou essa ideia para dentro da linguagem. Nos anos 70, com a linguagem CLU, ela propôs os <strong>tipos abstratos de dados</strong>: o tipo é definido pelas operações que oferece, e a forma como ele guarda os dados fica escondida. É dela também o princípio da substituição, o "L" do SOLID. Ela ganhou o Prêmio Turing de 2008.</p>
         <p class="olho">Há dois jeitos de projetar: tão simples que obviamente não tem defeito, ou tão complexo que não tem defeito óbvio.<cite>Tony Hoare, palestra do Prêmio Turing, 1980 (paráfrase)</cite></p>
@@ -283,7 +283,7 @@
     <h3 class="quem-tit">Quem é quem</h3>
     <ul class="quem">
       <li><span class="pt ph-AK" role="img" aria-label="Alan Kay"></span><div><h3>Alan Kay</h3><span class="anos">1940, EUA</span><p>Smalltalk, o conceito do Dynabook (um tablet imaginado em 1972) e boa parte da interface gráfica moderna, no Xerox PARC.</p></div></li>
-      <li><span class="pt sem" role="img" aria-label="Ole-Johan Dahl e Kristen Nygaard">DN</span><div><h3>Ole-Johan Dahl e Kristen Nygaard</h3><span class="anos">Noruega, Simula 67</span><p>Criaram classes, objetos e herança para simular sistemas do mundo real. Base do C++ e do Java.</p></div></li>
+      <li><span class="pt sem" role="img" aria-label="Ole-Johan Dahl e Kristen Nygaard">DN</span><div><h3>Ole-Johan Dahl e Kristen Nygaard</h3><span class="anos">Noruega, Simula 67</span><p>Criaram classes, objetos e herança para simular sistemas do mundo real. Ideias que passaram para o C++ e outras linguagens orientadas a objetos.</p></div></li>
     </ul>
     <div class="formulario" aria-label="Onde ler">
       <div class="folha">
@@ -333,7 +333,7 @@
     <h3 class="quem-tit">Quem é quem</h3>
     <ul class="quem">
       <li><span class="pt ph-RH" role="img" aria-label="Rich Hickey"></span><div><h3>Rich Hickey</h3><span class="anos">EUA, criou o Clojure em 2007</span><p>Passou anos em sistemas comerciais antes de criar uma linguagem para fugir do estado mutável.</p></div></li>
-      <li><span class="pt sem" role="img" aria-label="Ben Moseley e Peter Marks">MM</span><div><h3>Ben Moseley e Peter Marks</h3><span class="anos">Reino Unido, 2006</span><p>Escreveram um artigo só, mas é dos mais lidos sobre complexidade. Propõem a programação funcional-relacional.</p></div></li>
+      <li><span class="pt sem" role="img" aria-label="Ben Moseley e Peter Marks">MM</span><div><h3>Ben Moseley e Peter Marks</h3><span class="anos">Reino Unido, 2006</span><p>O artigo deles é muito citado nas discussões sobre complexidade. Propõem a programação funcional-relacional.</p></div></li>
       <li><span class="pt ph-JB" role="img" aria-label="John Backus"></span><div><h3>John Backus</h3><span class="anos">1924–2007, EUA</span><p>Criou o Fortran e, na palestra do Turing de 1977, perguntou se a programação podia se libertar do estilo de von Neumann.</p></div></li>
     </ul>
     <div class="formulario" aria-label="Onde ler">
@@ -589,7 +589,7 @@
       <div class="texto">
         <p>Na Ericsson, os sistemas de telefonia não podiam parar. <strong>Joe Armstrong</strong> e colegas criaram o Erlang para isso. A tese de doutorado dele, de 2003, parte da premissa de que o software <strong>vai</strong> ter erros. A pergunta não é como evitar todo erro, e sim como construir algo confiável mesmo assim.</p>
         <p>A resposta é ter processos pequenos e isolados, que não dividem memória e só conversam por mensagem, como em Kay. Quando um processo dá erro, ele morre, e outro processo, o supervisor, o reinicia do zero. A filosofia ficou conhecida como "let it crash", deixe cair.</p>
-        <p>Armstrong lembra que duplicar o servidor protege contra falha de hardware, mas não de software: se o código tem um erro, a cópia tem o mesmo erro.</p>
+        <p>Por isso copiar o servidor não basta: a cópia protege contra falha de hardware, mas não de software, porque o código com erro é o mesmo nas duas.</p>
         <p>Ele chamou a tese de "a documentação que faltava do Erlang", porque ela explica o porquê das decisões, e não só o como. É a teoria de Naur de novo.</p>
       </div>
       <div class="margem">
@@ -753,8 +753,8 @@
       <section>
         <h3>Cursos abertos</h3>
         <ul>
-          <li><a href="https://ocw.mit.edu/ans7870/6/6.005/s16/">MIT 6.005, Software Construction</a>. 27 leituras sobre especificação, testes, tipos abstratos e concorrência.</li>
-          <li><a href="https://web.stanford.edu/class/cs190">Stanford CS 190</a>. O curso de Ousterhout: a matrícula é fechada, mas as leituras são abertas.</li>
+          <li><a href="https://ocw.mit.edu/ans7870/6/6.005/s16/">MIT 6.005, Software Construction</a>. Leituras sobre especificação, testes, tipos abstratos e concorrência.</li>
+          <li><a href="https://web.stanford.edu/class/cs190">Stanford CS 190</a>. O curso de Ousterhout: a matrícula é limitada e exige candidatura, mas a página do curso é aberta.</li>
           <li><a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html">SICP</a>. O "livro do mago" do MIT, com aulas em vídeo. É denso: leia devagar.</li>
         </ul>
       </section>
