@@ -11,8 +11,6 @@
 <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-<div id="prog" aria-hidden="true"><i></i></div>
-
 <header class="capa">
   <div class="pagina">
     <div class="edicao"><span>Edição 1, outubro de 2026</span><span>Leitura de base para quem programa</span></div>
@@ -90,7 +88,7 @@
       </div>
       <div class="margem">
         <figure class="ilus">
-          <svg viewBox="0 0 300 220" role="img" aria-label="Um círculo grande chamado teoria, com um retângulo pequeno dentro chamado código">
+          <svg class="f-teoria" viewBox="0 0 300 220" role="img" aria-label="Um círculo grande chamado teoria, com um retângulo pequeno dentro chamado código">
             <circle cx="150" cy="105" r="92" class="dash"/>
             <text x="150" y="52" text-anchor="middle" class="t-big">teoria</text>
             <text x="150" y="72" text-anchor="middle" class="t-mu">o porquê de cada decisão</text>
@@ -125,7 +123,7 @@
       </div>
       <div class="margem">
         <figure class="ilus">
-          <svg viewBox="0 0 300 200" role="img" aria-label="Três módulos, cada um com um segredo escondido no centro e uma interface pequena no topo">
+          <svg class="f-modulos" viewBox="0 0 300 200" role="img" aria-label="Três módulos, cada um com um segredo escondido no centro e uma interface pequena no topo">
             <path d="M68 30 H134 M166 30 H232" class="ln"/>
             <rect x="15" y="44" width="86" height="116" class="bx"/>
             <rect x="107" y="44" width="86" height="116" class="bx"/>
@@ -187,7 +185,7 @@
       </div>
       <div class="margem">
         <figure class="ilus">
-          <svg viewBox="0 0 300 170" role="img" aria-label="Pipeline do Unix: cat, grep, sort e uniq ligados por pipes">
+          <svg class="f-unix" viewBox="0 0 300 170" role="img" aria-label="Pipeline do Unix: cat, grep, sort e uniq ligados por pipes">
             <text x="150" y="22" text-anchor="middle" class="t-ac">texto entra, texto sai</text>
             <rect x="4" y="62" width="58" height="38" class="bx"/>
             <rect x="80" y="62" width="58" height="38" class="bx"/>
@@ -198,6 +196,7 @@
             <text x="185" y="85" text-anchor="middle">sort</text>
             <text x="261" y="85" text-anchor="middle">uniq</text>
             <path d="M62 81 H80 M138 81 H156 M214 81 H232" class="lna"/>
+            <rect class="ac pkt" x="56" y="76" width="10" height="10"/>
             <text x="71" y="54" text-anchor="middle" class="t-ac t-big">|</text>
             <text x="147" y="54" text-anchor="middle" class="t-ac t-big">|</text>
             <text x="223" y="54" text-anchor="middle" class="t-ac t-big">|</text>
@@ -247,7 +246,7 @@
       </div>
       <div class="margem">
         <figure class="ilus">
-          <svg viewBox="0 0 300 210" role="img" aria-label="Três células trocando mensagens">
+          <svg class="f-celulas" viewBox="0 0 300 210" role="img" aria-label="Três células trocando mensagens">
             <circle cx="62" cy="70" r="34" class="bx"/>
             <circle cx="238" cy="70" r="34" class="bx"/>
             <circle cx="150" cy="158" r="34" class="bx"/>
@@ -255,9 +254,9 @@
             <circle cx="238" cy="70" r="11" class="mu"/>
             <circle cx="150" cy="158" r="11" class="mu"/>
             <path d="M98 66 H202 M220 102 L180 134 M120 134 L80 102" class="lna"/>
-            <rect x="136" y="56" width="28" height="20" class="ac"/><path d="M136 56 L150 68 L164 56" fill="none" stroke="var(--papel)" stroke-width="1.6"/>
-            <rect x="186" y="108" width="28" height="20" class="ac"/><path d="M186 108 L200 120 L214 108" fill="none" stroke="var(--papel)" stroke-width="1.6"/>
-            <rect x="86" y="108" width="28" height="20" class="ac"/><path d="M86 108 L100 120 L114 108" fill="none" stroke="var(--papel)" stroke-width="1.6"/>
+            <g class="env e1"><rect x="136" y="56" width="28" height="20" class="ac"/><path d="M136 56 L150 68 L164 56" fill="none" stroke="var(--papel)" stroke-width="1.6"/></g>
+            <g class="env e2"><rect x="186" y="108" width="28" height="20" class="ac"/><path d="M186 108 L200 120 L214 108" fill="none" stroke="var(--papel)" stroke-width="1.6"/></g>
+            <g class="env e3"><rect x="86" y="108" width="28" height="20" class="ac"/><path d="M86 108 L100 120 L114 108" fill="none" stroke="var(--papel)" stroke-width="1.6"/></g>
             <text x="150" y="20" text-anchor="middle" class="t-ac">a ideia grande é a mensagem</text>
             <text x="62" y="122" text-anchor="middle" class="t-mu">objeto</text>
             <text x="238" y="122" text-anchor="middle" class="t-mu">objeto</text>
@@ -300,7 +299,7 @@
       </div>
       <div class="margem">
         <figure class="ilus">
-          <svg viewBox="0 0 300 190" role="img" aria-label="À esquerda, três fios trançados. À direita, três fios lado a lado">
+          <svg class="f-fios" viewBox="0 0 300 190" role="img" aria-label="À esquerda, três fios trançados. À direita, três fios lado a lado">
             <path d="M14 66 C38 66 38 126 62 126 S86 66 110 66 S134 126 140 126" class="lna"/>
             <path d="M14 126 C38 126 38 66 62 66 S86 126 110 126 S134 66 140 66" class="ln"/>
             <path d="M14 96 C34 80 44 112 62 96 S92 80 110 96 S130 112 140 96" class="lnm"/>
@@ -353,7 +352,7 @@
       </div>
       <div class="margem">
         <figure class="ilus">
-          <svg viewBox="0 0 300 220" role="img" aria-label="Ciclo do TDD: o teste falha, passa, e o código é limpo">
+          <svg class="f-tdd" viewBox="0 0 300 220" role="img" aria-label="Ciclo do TDD: o teste falha, passa, e o código é limpo">
             <defs><marker id="seta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" style="fill:var(--tinta)"/></marker></defs>
             <path d="M174 52 A78 78 0 0 1 226 150" class="ln" marker-end="url(#seta)"/>
             <path d="M190 182 A78 78 0 0 1 110 182" class="ln" marker-end="url(#seta)"/>
@@ -405,7 +404,7 @@
       </div>
       <div class="margem">
         <figure class="ilus">
-          <svg viewBox="0 0 300 220" role="img" aria-label="Módulo profundo: interface estreita e corpo alto. Módulo raso: interface larga e corpo baixo">
+          <svg class="f-debate" viewBox="0 0 300 220" role="img" aria-label="Módulo profundo: interface estreita e corpo alto. Módulo raso: interface larga e corpo baixo">
             <rect x="34" y="36" width="70" height="10" class="ac"/>
             <rect x="34" y="46" width="70" height="142" class="rl"/>
             <rect x="158" y="36" width="130" height="10" class="ac"/>
@@ -476,7 +475,7 @@
       </div>
       <div class="margem">
         <figure class="ilus">
-          <svg viewBox="0 0 300 200" role="img" aria-label="Array de structs com cores misturadas, comparado a struct de arrays com cores agrupadas e uma linha de cache">
+          <svg class="f-dados" viewBox="0 0 300 200" role="img" aria-label="Array de structs com cores misturadas, comparado a struct de arrays com cores agrupadas e uma linha de cache">
             <text x="4" y="24">array de structs</text>
             <g transform="translate(4,32)">
               <rect x="0" width="23" height="23" class="ac"/><rect x="24" width="23" height="23" class="mu"/><rect x="48" width="23" height="23" class="rl"/>
@@ -532,7 +531,7 @@
       </div>
       <div class="margem">
         <figure class="ilus">
-          <svg viewBox="0 0 300 210" role="img" aria-label="Dois contextos, Comercial e Financeiro, cada um com seu próprio significado de Cliente">
+          <svg class="f-ddd" viewBox="0 0 300 210" role="img" aria-label="Dois contextos, Comercial e Financeiro, cada um com seu próprio significado de Cliente">
             <rect x="4" y="28" width="124" height="150" class="bx"/>
             <rect x="172" y="28" width="124" height="150" class="bx"/>
             <text x="66" y="52" text-anchor="middle" class="t-big">Comercial</text>
@@ -586,7 +585,7 @@
       </div>
       <div class="margem">
         <figure class="ilus">
-          <svg viewBox="0 0 300 200" role="img" aria-label="Árvore de supervisão: um supervisor no topo, três processos abaixo, um deles caiu e é reiniciado">
+          <svg class="f-erlang" viewBox="0 0 300 200" role="img" aria-label="Árvore de supervisão: um supervisor no topo, três processos abaixo, um deles caiu e é reiniciado">
             <path d="M150 56 L62 128 M150 56 V128 M150 56 L238 128" class="ln"/>
             <circle cx="150" cy="42" r="22" class="ac"/>
             <text x="150" y="46" text-anchor="middle" class="inv">sup</text>
@@ -636,7 +635,7 @@
       </div>
       <div class="margem">
         <figure class="ilus">
-          <svg viewBox="0 0 300 210" role="img" aria-label="Lei de Conway: três equipes com as mesmas ligações dos três componentes do sistema">
+          <svg class="f-conway" viewBox="0 0 300 210" role="img" aria-label="Lei de Conway: três equipes com as mesmas ligações dos três componentes do sistema">
             <text x="62" y="22" text-anchor="middle" class="t-big">equipes</text>
             <text x="238" y="22" text-anchor="middle" class="t-big">sistema</text>
             <path d="M62 58 L24 148 M62 58 L100 148" class="ln"/>
@@ -817,7 +816,7 @@
   <div class="pagina">
     <h2>Expediente</h2>
     <p>Os retratos sem foto livre disponível (Gabriel, Dahl e Nygaard, Moseley e Marks, Acton, Muratori, Evans, Conway e Gross) aparecem só com as iniciais. Os trechos em destaque são paráfrases, a não ser a regra de Pike, citada literalmente. Datas e fatos vieram de buscas na web em outubro de 2026, em boa parte de resumos, e não dos textos originais. Confira no original antes de citar alguém.</p>
-    <p>Fotos: Wikimedia Commons, todas com licença livre. Recortadas e em preto e branco. Passe o mouse para ver a cor original.</p>
+    <p>Fotos: Wikimedia Commons, todas com licença livre. Recortadas.</p>
     <ul class="creditos"><li>Edsger Dijkstra: <a href="https://commons.wikimedia.org/wiki/File:Edsger_Wybe_Dijkstra.jpg">Hamilton Richards</a>, CC BY-SA 3.0</li><li>David Parnas: <a href="https://commons.wikimedia.org/wiki/File:David_Parnas.jpg">Hubert Baumeister</a>, CC BY-SA 3.0</li><li>Tony Hoare: <a href="https://commons.wikimedia.org/wiki/File:Sir_Tony_Hoare_IMG_5125.jpg">Rama</a>, CC BY-SA 2.0 fr</li><li>Leslie Lamport: <a href="https://commons.wikimedia.org/wiki/File:Leslie_Lamport.jpg">Leslie Lamport</a>, Copyrighted free use</li><li>Ken Thompson: <a href="https://commons.wikimedia.org/wiki/File:Ken_Thompson,_2019.jpg">A.C.Diller</a>, CC BY-SA 4.0</li><li>Dennis Ritchie: <a href="https://commons.wikimedia.org/wiki/File:Dennis_Ritchie_2011.jpg">Denise Panyik-Dale</a>, CC BY 2.0</li><li>Rob Pike: <a href="https://commons.wikimedia.org/wiki/File:Rob-pike-oscon.jpg">Kevin Shockey</a>, CC BY 2.0</li><li>Alan Kay: <a href="https://commons.wikimedia.org/wiki/File:Alan_Kay_and_the_prototype_of_the_Dynabook_(3009206205).jpg">Marcin Wichary from San Francisco, U.S.A.</a>, CC BY 2.0</li><li>Rich Hickey: <a href="https://commons.wikimedia.org/wiki/File:Rich_Hickey.jpg">Tapestry Dude</a>, CC BY-SA 2.0</li><li>John Backus: <a href="https://commons.wikimedia.org/wiki/File:John_Backus_2.jpg">PIerre.Lescanne</a>, CC BY-SA 4.0</li><li>Kent Beck: <a href="https://commons.wikimedia.org/wiki/File:Kent_Beck_no_Workshop_Mapping_XP.jpg">Improve It</a>, CC BY-SA 2.0</li><li>Martin Fowler: <a href="https://commons.wikimedia.org/wiki/File:Webysther_20150414193208_-_Martin_Fowler.jpg">Webysther Nunes</a>, CC BY-SA 4.0</li><li>John Ousterhout: <a href="https://commons.wikimedia.org/wiki/File:Ouster_face.png">John Ousterhout</a>, Tcl/Tk</li><li>Robert C. Martin: <a href="https://commons.wikimedia.org/wiki/File:Robert_C._Martin_surrounded_by_computers_(cropped).jpg">Angelacleancoder</a>, CC BY-SA 4.0</li><li>Joe Armstrong: <a href="https://commons.wikimedia.org/wiki/File:An_erlang_expert_and_some_guy_named_Joe_(4133214882).jpg">Måns Sandström from Stockholm, Sweden</a>, CC BY 2.0</li><li>Fred Brooks: <a href="https://commons.wikimedia.org/wiki/File:Fred_Brooks_(cropped_square).jpg">Copyright owned by SD&amp;amp;M (www.sdm.de)</a>, CC BY-SA 3.0</li><li>Peter Naur: <a href="https://commons.wikimedia.org/wiki/File:Peternaur.JPG">The original uploader was Eriktj at English Wikipedia.</a>, CC BY-SA 3.0</li></ul>
     <p>Fontes principais:</p>
     <ul>
@@ -832,16 +831,19 @@
 </footer>
 
 <script>
+/* Liga as animações das figuras só enquanto elas estão na tela */
 (function(){
-  var bar=document.querySelector('#prog i');
-  function upd(){
-    var h=document.documentElement;
-    var max=h.scrollHeight-h.clientHeight;
-    bar.style.width=(max>0?(h.scrollTop/max*100):0)+'%';
+  var figs=document.querySelectorAll('figure.ilus');
+  if(!('IntersectionObserver' in window)){
+    for(var i=0;i<figs.length;i++)figs[i].classList.add('vivo');
+    return;
   }
-  window.addEventListener('scroll',upd,{passive:true});
-  upd();
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){e.target.classList.toggle('vivo',e.isIntersecting)});
+  },{threshold:.35});
+  for(var j=0;j<figs.length;j++)io.observe(figs[j]);
 })();
 </script>
+
 </body>
 </html>
