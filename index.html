@@ -589,7 +589,7 @@
       <div class="texto">
         <p>Na Ericsson, os sistemas de telefonia não podiam parar. <strong>Joe Armstrong</strong> e colegas criaram o Erlang para isso. A tese de doutorado dele, de 2003, parte da premissa de que o software <strong>vai</strong> ter erros. A pergunta não é como evitar todo erro, e sim como construir algo confiável mesmo assim.</p>
         <p>A resposta é ter processos pequenos e isolados, que não dividem memória e só conversam por mensagem, como em Kay. Quando um processo dá erro, ele morre, e outro processo, o supervisor, o reinicia do zero. A filosofia ficou conhecida como "let it crash", deixe cair.</p>
-        <p>Por isso copiar o servidor não basta: a cópia protege contra falha de hardware, mas não de software, porque o código com erro é o mesmo nas duas.</p>
+        <p>E copiar o servidor não basta: a cópia protege contra falha de hardware, mas não de software, porque o código com erro é o mesmo nas duas.</p>
         <p>Ele chamou a tese de "a documentação que faltava do Erlang", porque ela explica o porquê das decisões, e não só o como. É a teoria de Naur de novo.</p>
       </div>
       <div class="margem">
