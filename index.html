@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mentes do Software</title>
+<meta name="author" content="Otávio Felix">
 <meta name="description" content="As dez escolas de pensamento que moldaram o design de software: quem pensou cada uma, onde elas concordam, onde brigam e onde estudar.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="canonical" href="https://otaviofelix-in.github.io/Mentes-do-Software/">
@@ -26,7 +27,7 @@
 <body>
 <header class="capa">
   <div class="pagina">
-    <div class="edicao"><span>Edição 1, outubro de 2026</span><span>Leitura de base para quem programa</span></div>
+    <div class="edicao"><span>Edição 1, outubro de 2026 · por Otávio Felix</span><span>Leitura de base para quem programa</span></div>
     <h1 class="nome">Mentes do <span>Software</span></h1>
     <div class="capa-grade">
       <div>
@@ -69,7 +70,7 @@
     <h2>Nesta edição</h2>
     <ol>
       <li><a href="#abertura"><span class="n">—</span><span class="t">O programa de verdade não é o código<i>Abertura</i></span></a></li>
-      <li><a href="#rigor"><span class="n">1</span><span class="t">Pensar antes de codar<i>Dijkstra, Parnas, Hoare, Lamport</i></span></a></li>
+      <li><a href="#rigor"><span class="n">1</span><span class="t">Pensar antes de codar<i>Dijkstra, Parnas, Liskov, Hoare, Lamport</i></span></a></li>
       <li><a href="#unix"><span class="n">2</span><span class="t">Pequeno, simples, combinável<i>Thompson, Ritchie, Pike, Gabriel</i></span></a></li>
       <li><a href="#smalltalk"><span class="n">3</span><span class="t">Objetos que conversam<i>Alan Kay</i></span></a></li>
       <li><a href="#funcional"><span class="n">4</span><span class="t">O estado é o vilão<i>Hickey, Moseley e Marks, Backus</i></span></a></li>
@@ -131,6 +132,7 @@
         <p>No fim dos anos 60, o software já era grande demais para caber na cabeça de uma pessoa. A resposta desta escola foi a disciplina: se a mente é limitada, o programa tem que ser organizado para caber nela.</p>
         <p><strong>Dijkstra</strong> deu nome à ideia central, a <strong>separação de preocupações</strong>: estudar um aspecto do problema de cada vez, sabendo que os outros existem. Anos depois ele mesmo criticou o slogan. Separar é fácil. O difícil é saber onde cortar e como juntar de novo.</p>
         <p><strong>Parnas</strong> respondeu onde cortar. No artigo de 1972, ele divide o mesmo sistema de dois jeitos. O primeiro segue os passos do fluxo: ler, processar, gravar. O segundo divide pelas <strong>decisões que podem mudar</strong>, e cada módulo esconde uma delas. O segundo aguenta muito melhor a mudança, e é dele que vem o encapsulamento que você usa hoje.</p>
+        <p><strong>Barbara Liskov</strong> levou essa ideia para dentro da linguagem. Nos anos 70, com a linguagem CLU, ela propôs os <strong>tipos abstratos de dados</strong>: o tipo é definido pelas operações que oferece, e a forma como ele guarda os dados fica escondida. É dela também o princípio da substituição, o "L" do SOLID. Ela ganhou o Prêmio Turing de 2008.</p>
         <p class="olho">Há dois jeitos de projetar: tão simples que obviamente não tem defeito, ou tão complexo que não tem defeito óbvio.<cite>Tony Hoare, palestra do Prêmio Turing, 1980 (paráfrase)</cite></p>
         <p><strong>Hoare</strong> completou que o primeiro jeito é muito mais difícil. <strong>Lamport</strong> levou isso adiante: o arquiteto desenha a planta antes de assentar o tijolo, mas o programador quase nunca escreve o que vai fazer antes de codar. Ele defende escrever a especificação primeiro, mesmo que seja em prosa.</p>
       </div>
@@ -162,6 +164,7 @@
     <ul class="quem">
       <li><span class="pt ph-ED" role="img" aria-label="Edsger Dijkstra"></span><div><h3>Edsger Dijkstra</h3><span class="anos">1930–2002, Holanda</span><p>Algoritmo do menor caminho, programação estruturada e a carta contra o GOTO. Escreveu mais de mil notas à mão, as EWDs.</p></div></li>
       <li><span class="pt ph-DP" role="img" aria-label="David Parnas"></span><div><h3>David Parnas</h3><span class="anos">1941, Canadá e EUA</span><p>Pai da ocultação de informação. Mostrou que o critério de divisão importa mais que a divisão em si.</p></div></li>
+      <li><span class="pt sem">BL</span><div><h3>Barbara Liskov</h3><span class="anos">1939, EUA</span><p>Criou a linguagem CLU e os tipos abstratos de dados. Deu nome ao princípio da substituição. Prêmio Turing em 2008.</p></div></li>
       <li><span class="pt ph-TH" role="img" aria-label="Tony Hoare"></span><div><h3>Tony Hoare</h3><span class="anos">1934–2026, Reino Unido</span><p>Criou o quicksort e a lógica de Hoare. Na palestra do Turing, contou os próprios fracassos de projeto.</p></div></li>
       <li><span class="pt ph-LL" role="img" aria-label="Leslie Lamport"></span><div><h3>Leslie Lamport</h3><span class="anos">1941, EUA</span><p>Relógios lógicos, Paxos, LaTeX e TLA+. Insiste que programar e codar são coisas diferentes.</p></div></li>
     </ul>
@@ -818,7 +821,8 @@
 <footer class="expediente">
   <div class="pagina">
     <h2>Expediente</h2>
-    <p>Os retratos sem foto livre disponível (Gabriel, Dahl e Nygaard, Moseley e Marks, Acton, Muratori, Evans, Conway e Gross) aparecem só com as iniciais. Os trechos em destaque são paráfrases, a não ser a regra de Pike, citada literalmente. Datas e fatos vieram de buscas na web em outubro de 2026, em boa parte de resumos, e não dos textos originais. Confira no original antes de citar alguém.</p>
+    <p>Os retratos sem foto livre disponível (Gabriel, Liskov, Dahl e Nygaard, Moseley e Marks, Acton, Muratori, Evans, Conway e Gross) aparecem só com as iniciais. Os trechos em destaque são paráfrases, a não ser a regra de Pike, citada literalmente. Datas e fatos vieram de buscas na web em outubro de 2026, em boa parte de resumos, e não dos textos originais. Confira no original antes de citar alguém.</p>
+    <p>Revista de Otávio Felix. Outros projetos em <a href="https://otaviofelix-in.github.io/site-pessoal/">otaviofelix-in.github.io/site-pessoal</a>.</p>
     <p>Fotos: Wikimedia Commons, todas com licença livre. Recortadas.</p>
     <ul class="creditos"><li>Edsger Dijkstra: <a href="https://commons.wikimedia.org/wiki/File:Edsger_Wybe_Dijkstra.jpg">Hamilton Richards</a>, CC BY-SA 3.0</li><li>David Parnas: <a href="https://commons.wikimedia.org/wiki/File:David_Parnas.jpg">Hubert Baumeister</a>, CC BY-SA 3.0</li><li>Tony Hoare: <a href="https://commons.wikimedia.org/wiki/File:Sir_Tony_Hoare_IMG_5125.jpg">Rama</a>, CC BY-SA 2.0 fr</li><li>Leslie Lamport: <a href="https://commons.wikimedia.org/wiki/File:Leslie_Lamport.jpg">Leslie Lamport</a>, Copyrighted free use</li><li>Ken Thompson: <a href="https://commons.wikimedia.org/wiki/File:Ken_Thompson,_2019.jpg">A.C.Diller</a>, CC BY-SA 4.0</li><li>Dennis Ritchie: <a href="https://commons.wikimedia.org/wiki/File:Dennis_Ritchie_2011.jpg">Denise Panyik-Dale</a>, CC BY 2.0</li><li>Rob Pike: <a href="https://commons.wikimedia.org/wiki/File:Rob-pike-oscon.jpg">Kevin Shockey</a>, CC BY 2.0</li><li>Alan Kay: <a href="https://commons.wikimedia.org/wiki/File:Alan_Kay_and_the_prototype_of_the_Dynabook_(3009206205).jpg">Marcin Wichary from San Francisco, U.S.A.</a>, CC BY 2.0</li><li>Rich Hickey: <a href="https://commons.wikimedia.org/wiki/File:Rich_Hickey.jpg">Tapestry Dude</a>, CC BY-SA 2.0</li><li>John Backus: <a href="https://commons.wikimedia.org/wiki/File:John_Backus_2.jpg">PIerre.Lescanne</a>, CC BY-SA 4.0</li><li>Kent Beck: <a href="https://commons.wikimedia.org/wiki/File:Kent_Beck_no_Workshop_Mapping_XP.jpg">Improve It</a>, CC BY-SA 2.0</li><li>Martin Fowler: <a href="https://commons.wikimedia.org/wiki/File:Webysther_20150414193208_-_Martin_Fowler.jpg">Webysther Nunes</a>, CC BY-SA 4.0</li><li>John Ousterhout: <a href="https://commons.wikimedia.org/wiki/File:Ouster_face.png">John Ousterhout</a>, Tcl/Tk</li><li>Robert C. Martin: <a href="https://commons.wikimedia.org/wiki/File:Robert_C._Martin_surrounded_by_computers_(cropped).jpg">Angelacleancoder</a>, CC BY-SA 4.0</li><li>Joe Armstrong: <a href="https://commons.wikimedia.org/wiki/File:An_erlang_expert_and_some_guy_named_Joe_(4133214882).jpg">Måns Sandström from Stockholm, Sweden</a>, CC BY 2.0</li><li>Fred Brooks: <a href="https://commons.wikimedia.org/wiki/File:Fred_Brooks_(cropped_square).jpg">Copyright owned by SD&amp;M (www.sdm.de)</a>, CC BY-SA 3.0</li><li>Peter Naur: <a href="https://commons.wikimedia.org/wiki/File:Peternaur.JPG">The original uploader was Eriktj at English Wikipedia.</a>, CC BY-SA 3.0</li></ul>
     <p>Fontes principais:</p>
