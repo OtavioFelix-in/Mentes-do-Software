@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" role="img" aria-label="Mentes do Software: as dez escolas de pensamento do design de software">
+  <style>
+    text{font-family:"IBM Plex Sans Condensed","Arial Narrow",Arial,Helvetica,sans-serif}
+    .mono{font-family:"IBM Plex Mono","Courier New",monospace}
+    .tinta{fill:#1E2432}.vermelho{fill:#B8282E}.cinza{fill:#646A78}
+    .caixa{fill:#fff;stroke:#1E2432;stroke-width:1.6}
+    .tracejado{fill:none;stroke:#646A78;stroke-width:1.4;stroke-dasharray:4 4;animation:marcha 4s linear infinite}
+    .linha{fill:#646A78;transform-box:fill-box;transform-origin:left center;animation:digita 6s ease-in-out infinite}
+    .l2{animation-delay:.4s}.l3{animation-delay:.8s}
+    .pacote{fill:#B8282E;opacity:0;animation:pacote 5s linear infinite}
+    .elo{fill:none;stroke:#B8282E;stroke-width:2.4}
+    @keyframes marcha{to{stroke-dashoffset:-8}}
+    @keyframes digita{0%,10%{transform:scaleX(0)}30%,90%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+    @keyframes pacote{
+      0%{transform:translateX(0);opacity:0}
+      6%{opacity:1}
+      24%{transform:translateX(25px);opacity:1}
+      28%,32%{transform:translateX(25px);opacity:0}
+      33%{transform:translateX(145px);opacity:0}
+      38%{opacity:1}
+      56%{transform:translateX(170px);opacity:1}
+      60%,65%{transform:translateX(170px);opacity:0}
+      66%{transform:translateX(265px);opacity:0}
+      71%{opacity:1}
+      89%{transform:translateX(290px);opacity:1}
+      93%,100%{transform:translateX(290px);opacity:0}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}.pacote{opacity:0}}
+  </style>
+  <rect width="900" height="300" fill="#fff"/>
+  <rect x=".8" y=".8" width="898.4" height="298.4" fill="none" stroke="#DCDDD5" stroke-width="1.6"/>
+
+  <text x="40" y="44" class="mono cinza" font-size="13">EDIÇÃO 1 · OUTUBRO DE 2026</text>
+  <line x1="40" y1="56" x2="860" y2="56" stroke="#1E2432" stroke-width="2"/>
+
+  <text x="40" y="128" font-size="64" font-weight="700" class="tinta">Mentes do <tspan class="vermelho">Software</tspan></text>
+  <text x="40" y="164" font-size="19" class="cinza" font-style="italic">As dez escolas de pensamento que moldaram o design de software.</text>
+
+  <!-- pipeline do Unix -->
+  <g font-size="15" text-anchor="middle">
+    <rect class="caixa" x="40"  y="200" width="90" height="44"/><text x="85"  y="228" class="tinta">cat</text>
+    <rect class="caixa" x="160" y="200" width="90" height="44"/><text x="205" y="228" class="tinta">grep</text>
+    <rect class="caixa" x="280" y="200" width="90" height="44"/><text x="325" y="228" class="tinta">sort</text>
+    <rect class="caixa" x="400" y="200" width="90" height="44"/><text x="445" y="228" class="tinta">uniq</text>
+  </g>
+  <path class="elo" d="M130 222 H160 M250 222 H280 M370 222 H400"/>
+  <rect class="pacote" x="125" y="217" width="10" height="10"/>
+  <text x="40" y="272" class="mono cinza" font-size="12">peças pequenas, ligadas por texto</text>
+
+  <!-- teoria e código -->
+  <circle class="tracejado" cx="710" cy="168" r="96"/>
+  <text x="710" y="132" text-anchor="middle" font-size="20" font-weight="700" class="tinta">teoria</text>
+  <text x="710" y="152" text-anchor="middle" font-size="12" class="cinza">o porquê de cada decisão</text>
+  <rect class="caixa" x="676" y="170" width="68" height="42"/>
+  <rect class="linha"    x="686" y="180" width="38" height="4"/>
+  <rect class="linha l2" x="686" y="190" width="48" height="4"/>
+  <rect class="linha l3" x="686" y="200" width="28" height="4"/>
+  <text x="710" y="234" text-anchor="middle" font-size="13" class="vermelho">código</text>
+</svg>
