@@ -31,19 +31,12 @@ Perguntas para puxar a opinião dele:
 - Qual você acha errada ou superestimada?
 - Algum código seu (PI, projetos, trabalho) ficou ruim por um motivo que uma dessas escolas explica?
 
-## Correções técnicas pendentes (achadas na revisão de 27/10/2026)
+## Correções técnicas (revisão de 27/10/2026, conferida em 11/11/2026)
 
-- [ ] Adicionar `meta description`, `og:title`, `og:description` e `og:image`. Sem eles, o link compartilhado não mostra prévia.
-- [ ] Favicon.
-- [ ] Tese do Armstrong (`index.html`, reportagem 9): o mirror `mirror.its.dal.ca` não respondeu. Trocar por uma fonte estável.
-- [ ] Reportagem 5: o rótulo `O'REILLY` aponta para uma resenha no hamvocke.com. Corrigir o rótulo ou o link.
-- [ ] Expediente: crédito do Fred Brooks com escape duplo (`SD&amp;amp;M` aparece como "SD&amp;M").
-- [ ] Expediente: a licença da foto do Ousterhout está como "Tcl/Tk". Conferir no Wikimedia.
-- [ ] Remover o `<p></p>` vazio no fim de cada bloco "Onde ler".
-- [ ] Remover `<meta name="claude:viewport-fit-sides">` (sobra, sem uso fora do Claude).
-- [ ] Item `CACM 15(12)` na reportagem 1 está sem link.
-- [ ] Links que deram 403 num teste automático: DTIC (Parnas), SE Radio 577 e Microsoft Research (Lamport). Provavelmente é bloqueio a robô. Conferir no navegador.
-- [ ] O arquivo EWD do Dijkstra (`cs.utexas.edu/~EWD`) não respondeu no teste. Conferir.
+Todas resolvidas: meta tags e prévia, favicon, tese do Armstrong (erlang.org), rótulo da resenha na reportagem 5, crédito do Brooks, `<p></p>` vazios, meta do Claude e link do CACM.
+- Licença da foto do Ousterhout: o Wikimedia registra mesmo "Tcl/Tk license". Está certo.
+- Links conferidos no navegador em 11/11: SE Radio 577 e arquivo EWD abrem; Microsoft Research mudou de endereço e foi atualizado.
+- [ ] DTIC (Parnas, AD0773837): o site estava em manutenção em 11/11. Conferir de novo depois.
 
 ## Estrutura dos arquivos
 
