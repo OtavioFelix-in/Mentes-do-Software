@@ -28,15 +28,23 @@
 <header class="capa">
   <div class="pagina">
     <div class="edicao"><span>Edição 1, outubro de 2026 · Edição e texto: <a href="https://otaviofelix-in.github.io/site/">Otávio Felix</a></span><span>Leitura de base para quem programa</span></div>
-    <h1 class="nome">Mentes do <span>Software</span></h1>
+    <div class="nome-linha">
+      <h1 class="nome">Mentes do <span>Software</span></h1>
+      <p class="selo" aria-label="Número 1, outubro de 2026"><b>Nº 1</b><span>out. 2026</span></p>
+    </div>
     <div class="capa-grade">
       <div>
         <p class="chamada">As dez escolas de pensamento que moldaram o jeito de projetar software, quem pensou cada uma, onde elas concordam, onde brigam e onde você estuda cada ideia.</p>
+        <a class="manchete" href="#debate">
+          <span class="chapeu">O grande debate · p. 10</span>
+          <strong>Funções pequenas ou módulos profundos?</strong>
+          <span class="sub">Ousterhout e Uncle Bob discordaram por escrito durante cinco meses. Os argumentos dos dois, lado a lado, com código.</span>
+        </a>
         <ul class="chamadas">
-          <li>O programa de verdade mora na cabeça<span>Peter Naur e a teoria por trás do código</span></li>
-          <li>Funções pequenas ou módulos profundos?<span>O debate entre Ousterhout e Uncle Bob</span></li>
-          <li>Onde estudar<span>Livros, artigos, cursos e palestras, quase tudo grátis</span></li>
-          <li>Sete semanas para montar a sua base<span>Um plano de leitura, do mais fácil ao mais denso</span></li>
+          <li><a href="#abertura"><span class="pg">p. 03</span>O programa de verdade mora na cabeça<span>Peter Naur e a teoria por trás do código</span></a></li>
+          <li><a href="#linha"><span class="pg">p. 04</span>Sessenta anos de ideias numa linha<span>Do Simula 67 ao debate de 2025</span></a></li>
+          <li><a href="#biblioteca"><span class="pg">p. 16</span>Onde estudar<span>Livros, artigos, cursos e palestras, quase tudo grátis</span></a></li>
+          <li><a href="#trilha"><span class="pg">p. 17</span>Sete semanas para montar a sua base<span>Um plano de leitura, do mais fácil ao mais denso</span></a></li>
         </ul>
       </div>
       <div class="capa-retratos" aria-label="Os pensadores desta edição">
@@ -69,20 +77,21 @@
   <div class="pagina">
     <h2>Nesta edição</h2>
     <ol>
-      <li><a href="#abertura"><span class="n">—</span><span class="t">O programa de verdade não é o código<i>Abertura</i></span></a></li>
-      <li><a href="#rigor"><span class="n">1</span><span class="t">Pensar antes de codar<i>Dijkstra, Parnas, Liskov, Hoare, Lamport</i></span></a></li>
-      <li><a href="#unix"><span class="n">2</span><span class="t">Pequeno, simples, combinável<i>Thompson, Ritchie, Pike, Gabriel</i></span></a></li>
-      <li><a href="#smalltalk"><span class="n">3</span><span class="t">Objetos que conversam<i>Alan Kay</i></span></a></li>
-      <li><a href="#funcional"><span class="n">4</span><span class="t">O estado é o vilão<i>Hickey, Moseley e Marks, Backus</i></span></a></li>
-      <li><a href="#agil"><span class="n">5</span><span class="t">Design que emerge<i>Beck, Fowler</i></span></a></li>
-      <li><a href="#debate"><span class="n">6</span><span class="t">Funções pequenas ou módulos profundos?<i>Ousterhout contra Martin</i></span></a></li>
-      <li><a href="#dados"><span class="n">7</span><span class="t">O hardware existe<i>Acton, Muratori</i></span></a></li>
-      <li><a href="#ddd"><span class="n">8</span><span class="t">O negócio no centro<i>Eric Evans</i></span></a></li>
-      <li><a href="#erlang"><span class="n">9</span><span class="t">Sistemas que não caem<i>Joe Armstrong</i></span></a></li>
-      <li><a href="#humano"><span class="n">10</span><span class="t">Software é feito por gente<i>Brooks, Conway, Naur, Gross</i></span></a></li>
-      <li><a href="#sintese"><span class="n">—</span><span class="t">Onde concordam e onde brigam<i>Síntese</i></span></a></li>
-      <li><a href="#biblioteca"><span class="n">—</span><span class="t">Onde estudar<i>Biblioteca</i></span></a></li>
-      <li><a href="#trilha"><span class="n">—</span><span class="t">Sete semanas de leitura<i>Plano de estudo</i></span></a></li>
+      <li><a href="#abertura"><span class="n">—</span><span class="t">O programa de verdade não é o código<i>Abertura</i></span><span class="p">03</span></a></li>
+      <li><a href="#linha"><span class="n">—</span><span class="t">Sessenta anos de ideias<i>Linha do tempo</i></span><span class="p">04</span></a></li>
+      <li><a href="#rigor"><span class="n">1</span><span class="t">Pensar antes de codar<i>Dijkstra, Parnas, Liskov, Hoare, Lamport</i></span><span class="p">05</span></a></li>
+      <li><a href="#unix"><span class="n">2</span><span class="t">Pequeno, simples, combinável<i>Thompson, Ritchie, Pike, Gabriel</i></span><span class="p">06</span></a></li>
+      <li><a href="#smalltalk"><span class="n">3</span><span class="t">Objetos que conversam<i>Alan Kay</i></span><span class="p">07</span></a></li>
+      <li><a href="#funcional"><span class="n">4</span><span class="t">O estado é o vilão<i>Hickey, Moseley e Marks, Backus</i></span><span class="p">08</span></a></li>
+      <li><a href="#agil"><span class="n">5</span><span class="t">Design que emerge<i>Beck, Fowler</i></span><span class="p">09</span></a></li>
+      <li><a href="#debate"><span class="n">6</span><span class="t">Funções pequenas ou módulos profundos?<i>Ousterhout contra Martin</i></span><span class="p">10</span></a></li>
+      <li><a href="#dados"><span class="n">7</span><span class="t">O hardware existe<i>Acton, Muratori</i></span><span class="p">11</span></a></li>
+      <li><a href="#ddd"><span class="n">8</span><span class="t">O negócio no centro<i>Eric Evans</i></span><span class="p">12</span></a></li>
+      <li><a href="#erlang"><span class="n">9</span><span class="t">Sistemas que não caem<i>Joe Armstrong</i></span><span class="p">13</span></a></li>
+      <li><a href="#humano"><span class="n">10</span><span class="t">Software é feito por gente<i>Brooks, Conway, Naur, Gross</i></span><span class="p">14</span></a></li>
+      <li><a href="#sintese"><span class="n">—</span><span class="t">Onde concordam e onde brigam<i>Síntese</i></span><span class="p">15</span></a></li>
+      <li><a href="#biblioteca"><span class="n">—</span><span class="t">Onde estudar<i>Biblioteca</i></span><span class="p">16</span></a></li>
+      <li><a href="#trilha"><span class="n">—</span><span class="t">Sete semanas de leitura<i>Plano de estudo</i></span><span class="p">17</span></a></li>
     </ol>
   </div>
 </nav>
@@ -97,7 +106,7 @@
       <div class="texto">
         <p>O dinamarquês Peter Naur, um dos criadores do Algol 60 e da notação BNF, escreveu um ensaio curto chamado <em>Programming as Theory Building</em>. A tese é que programar é construir uma teoria: entender o problema a ponto de saber por que cada parte é como é, o que pode mudar e o que não pode.</p>
         <p>O código é o que sobra dessa teoria. Ele mostra <strong>o quê</strong>, mas raramente mostra <strong>o porquê</strong>. Quando as pessoas que tinham a teoria vão embora, o sistema continua rodando, e ninguém mais sabe mexer nele com segurança.</p>
-        <p>Por isso vale ter base. Frameworks mudam a cada cinco anos. As mais antigas têm mais de 50 anos, as mais novas foram escritas nesta década, e todas continuam valendo. Quem conhece só a forma copia padrões sem saber quando eles param de servir. Quem conhece a razão tem critério.</p>
+        <p>Por isso vale ter base. Frameworks mudam a cada cinco anos. Das ideias desta edição, as mais antigas têm mais de 50 anos, as mais novas foram escritas nesta década, e todas continuam valendo. Quem conhece só a forma copia padrões sem saber quando eles param de servir. Quem conhece a razão tem critério.</p>
         <p>Os grandes também discordam entre si, e muito. Conhecer as várias escolas evita que você vire seguidor de uma só. Leia cada reportagem como uma lente, não como uma lei.</p>
       </div>
       <div class="margem">
@@ -118,8 +127,62 @@
         </figure>
       </div>
     </div>
+    <div class="folio impar"><span class="pg">03</span><span>Mentes do Software · Edição 1 · Outubro de 2026</span></div>
   </div>
 </article>
+
+<!-- LINHA DO TEMPO -->
+<section class="secao" id="linha">
+  <div class="pagina">
+    <div class="corrido"><span>Mentes do Software</span><span>Linha do tempo</span></div>
+    <h2>Sessenta anos de ideias</h2>
+    <p class="linha-fina">Quando cada texto desta edição apareceu. O número em vermelho leva à reportagem.</p>
+    <div class="tempo" role="list">
+      <section role="listitem"><h3>Anos 60</h3><ol>
+        <li><b>1967</b>Simula 67: classes e objetos, de Dahl e Nygaard <a href="#smalltalk" aria-label="reportagem 3">3</a></li>
+        <li><b>1968</b>Dijkstra publica a carta contra o GOTO <a href="#rigor" aria-label="reportagem 1">1</a></li>
+        <li><b>1968</b>Conway, <em>How Do Committees Invent?</em> <a href="#humano" aria-label="reportagem 10">10</a></li>
+        <li><b>1969</b>Thompson e Ritchie começam o Unix <a href="#unix" aria-label="reportagem 2">2</a></li>
+      </ol></section>
+      <section role="listitem"><h3>Anos 70</h3><ol>
+        <li><b>1972</b>Parnas publica o artigo dos módulos <a href="#rigor" aria-label="reportagem 1">1</a></li>
+        <li><b>1972</b>Nasce a linguagem C <a href="#unix" aria-label="reportagem 2">2</a></li>
+        <li><b>1974</b>Liskov e Zilles, tipos abstratos de dados <a href="#rigor" aria-label="reportagem 1">1</a></li>
+        <li><b>1975</b>Brooks, <em>The Mythical Man-Month</em> <a href="#humano" aria-label="reportagem 10">10</a></li>
+        <li><b>1977</b>Backus pergunta se dá para fugir de von Neumann <a href="#funcional" aria-label="reportagem 4">4</a></li>
+      </ol></section>
+      <section role="listitem"><h3>Anos 80</h3><ol>
+        <li><b>1980</b>Hoare e as roupas velhas do imperador <a href="#rigor" aria-label="reportagem 1">1</a></li>
+        <li><b>1985</b>Naur, <em>Programming as Theory Building</em> <a href="#abertura" aria-label="abertura">ab</a></li>
+        <li><b>1986</b>Brooks, <em>No Silver Bullet</em> <a href="#humano" aria-label="reportagem 10">10</a></li>
+        <li><b>1989</b>As regras de Pike e o <em>Worse is Better</em> de Gabriel <a href="#unix" aria-label="reportagem 2">2</a></li>
+      </ol></section>
+      <section role="listitem"><h3>Anos 90</h3><ol>
+        <li><b>1998</b>Kay: a ideia grande é a mensagem <a href="#smalltalk" aria-label="reportagem 3">3</a></li>
+        <li><b>1999</b>Beck lança o XP, Fowler o <em>Refactoring</em> <a href="#agil" aria-label="reportagem 5">5</a></li>
+      </ol></section>
+      <section role="listitem"><h3>Anos 2000</h3><ol>
+        <li><b>2001</b>Manifesto Ágil <a href="#agil" aria-label="reportagem 5">5</a></li>
+        <li><b>2003</b>Evans, <em>Domain-Driven Design</em> <a href="#ddd" aria-label="reportagem 8">8</a></li>
+        <li><b>2003</b>A tese de Armstrong sobre o Erlang <a href="#erlang" aria-label="reportagem 9">9</a></li>
+        <li><b>2006</b>Moseley e Marks, <em>Out of the Tar Pit</em> <a href="#funcional" aria-label="reportagem 4">4</a></li>
+        <li><b>2008</b>Martin, <em>Clean Code</em> <a href="#debate" aria-label="reportagem 6">6</a></li>
+      </ol></section>
+      <section role="listitem"><h3>Anos 2010</h3><ol>
+        <li><b>2011</b>Hickey, <em>Simple Made Easy</em> <a href="#funcional" aria-label="reportagem 4">4</a></li>
+        <li><b>2014</b>Acton abre a CppCon <a href="#dados" aria-label="reportagem 7">7</a></li>
+        <li><b>2018</b>Ousterhout, <em>A Philosophy of Software Design</em> <a href="#debate" aria-label="reportagem 6">6</a></li>
+      </ol></section>
+      <section role="listitem"><h3>Anos 2020</h3><ol>
+        <li><b>2022</b>Gross, <em>The Grug Brained Developer</em> <a href="#humano" aria-label="reportagem 10">10</a></li>
+        <li><b>2023</b>Muratori mede o Clean Code <a href="#dados" aria-label="reportagem 7">7</a></li>
+        <li><b>2023</b>Beck, <em>Tidy First?</em> <a href="#agil" aria-label="reportagem 5">5</a></li>
+        <li><b>2024–25</b>O debate Ousterhout e Martin <a href="#debate" aria-label="reportagem 6">6</a></li>
+      </ol></section>
+    </div>
+    <div class="folio par"><span class="pg">04</span><span>Mentes do Software · Edição 1 · Outubro de 2026</span></div>
+  </div>
+</section>
 
 <!-- 1 -->
 <article class="materia" id="rigor">
@@ -160,6 +223,40 @@
         </figure>
       </div>
     </div>
+    <section class="pratica" aria-labelledby="pr1">
+      <h3 id="pr1"><span>Na prática</span>Parnas em JavaScript</h3>
+      <p class="pratica-intro">Uma agenda guardada em texto, uma linha por contato: <code>nome;telefone</code>. O formato do arquivo é a decisão que pode mudar.</p>
+      <div class="lado">
+        <figure>
+          <figcaption>Dividido pelos passos</figcaption>
+<pre><code><span class="c">// todo mundo conhece o formato "nome;telefone"</span>
+function ler(texto) {
+  return texto.split('\n');
+}
+function buscar(linhas, nome) {
+  return linhas.find(l => l.split(';')[0] === nome);
+}
+function telefone(linha) {
+  return linha.split(';')[1];
+}</code></pre>
+          <p class="veredito">Se o arquivo virar JSON, as três funções mudam, e todo código que chama <code>buscar</code> também.</p>
+        </figure>
+        <figure>
+          <figcaption>Dividido pelo que pode mudar</figcaption>
+<pre><code><span class="c">// o formato é segredo deste módulo</span>
+function criarAgenda(texto) {
+  const contatos = new Map(
+    texto.split('\n').map(l => l.split(';'))
+  );
+  return {
+    telefoneDe: nome => contatos.get(nome),
+  };
+}</code></pre>
+          <p class="veredito">Quem usa só conhece <code>telefoneDe</code>. Se o arquivo virar JSON, só o miolo de <code>criarAgenda</code> muda.</p>
+        </figure>
+      </div>
+      <p class="pratica-nota">Exemplo da redação, inspirado no artigo. O exemplo original de Parnas é um índice de palavras (KWIC), dividido dos dois jeitos.</p>
+    </section>
     <h3 class="quem-tit">Quem é quem</h3>
     <ul class="quem">
       <li><span class="pt ph-ED" role="img" aria-label="Edsger Dijkstra"></span><div><h3>Edsger Dijkstra</h3><span class="anos">1930–2002, Holanda</span><p>Algoritmo do menor caminho, programação estruturada e a carta contra o GOTO. Escreveu mais de mil notas à mão, as EWDs.</p></div></li>
@@ -181,7 +278,7 @@
         </ol>
       </div>
     </div>
-    <div class="folio">1</div>
+    <div class="folio impar"><span class="pg">03</span><span>Mentes do Software · Edição 1 · Outubro de 2026</span></div>
   </div>
 </article>
 
@@ -193,11 +290,13 @@
       <p class="linha-fina">A turma que fez o Unix e o C: programas que fazem uma coisa só, ligados por texto.</p></div>
     <div class="corpo">
       <div class="texto">
-        <p>Enquanto o MIT queria a solução perfeita, um grupo dos Bell Labs, em New Jersey, queria algo que funcionasse logo. Dali saíram o Unix e o C. A ideia era fazer programas pequenos, cada um fazendo uma coisa bem, e combiná-los por uma interface universal: texto.</p>
+        <p>Em 1969, um grupo pequeno dos Bell Labs, em New Jersey, começou o Unix, e pouco depois o C. Queriam algo que funcionasse logo, numa máquina modesta. A ideia era fazer programas pequenos, cada um fazendo uma coisa bem, e combiná-los por uma interface universal: texto.</p>
         <p><strong>Rob Pike</strong> resumiu a visão sobre dados em duas palavras, na regra 5 das suas notas de programação: "Data dominates." Escolha bem a estrutura de dados e o algoritmo fica quase óbvio. Quem trabalha com banco de dados conhece isso: uma tabela bem desenhada resolve metade do problema.</p>
-        <p><strong>Richard Gabriel</strong>, um homem do Lisp, olhou de fora e escreveu <em>Worse is Better</em>, em 1989. Ele comparou dois jeitos de pensar. No do MIT, a interface tem que ser perfeita, mesmo que a implementação fique complicada. No de New Jersey, a implementação simples vem primeiro, mesmo que a interface sofra.</p>
+        <p><strong>Richard Gabriel</strong>, um homem do Lisp, olhou de fora e escreveu <em>Worse is Better</em> em 1989, como trecho da palestra <em>Lisp: Good News, Bad News, How to Win Big</em>, apresentada em 1990. Os rótulos "MIT" e "New Jersey" são dele, dados vinte anos depois do Unix, e descrevem dois jeitos de pesar quatro qualidades: simplicidade, correção, consistência e completude. No do MIT, a interface tem que ser simples e correta, mesmo que a implementação fique complicada. No de New Jersey, a implementação simples vem primeiro, mesmo que a interface sofra.</p>
+        <p>O exemplo dele é miúdo: o que fazer quando uma chamada de sistema é interrompida no meio. No ITS, o sistema do MIT, a operação é desfeita e recomeçada sem o programa perceber. O Unix devolve um código de erro, e o programa que se vire para tentar de novo.</p>
         <p class="olho">A solução mais simples, e "pior", se espalha mais rápido e sobrevive melhor.<cite>Richard Gabriel, 1989 (paráfrase)</cite></p>
-        <p>Os exemplos dele: o C venceu o Lisp, e o Unix venceu sistemas mais elegantes. A lição incômoda é que ser simples de implementar e de levar para outra máquina pesa mais do que estar certo.</p>
+        <p>Daí ele chama o Unix e o C de "os vírus de computador definitivos": fáceis de implementar e de levar para outra máquina, se espalham primeiro e só depois são melhorados até chegar perto do certo.</p>
+        <p>Cuidado com a leitura rasa de que "o C venceu o Lisp". O texto foi escrito para a própria comunidade Lisp, como alerta sobre como ela projetava a linguagem, e o próprio Gabriel avisa que tirar dali que o C é a ferramenta certa para inteligência artificial é a lição errada. Depois, ele mesmo atacou o ensaio sob pseudônimo, respondeu ao ataque e, em 2000, escreveu dois textos, um contra e um a favor. Sua posição final: "ainda não consigo decidir".</p>
       </div>
       <div class="margem">
         <figure class="ilus">
@@ -224,6 +323,29 @@
           </svg>
           <figcaption>A filosofia Unix: peças pequenas que se combinam valem mais que um programa que faz tudo.</figcaption>
         </figure>
+        <figure class="ilus">
+          <svg class="f-gabriel" viewBox="0 0 300 236" role="img" aria-labelledby="fig3b-t"><title id="fig3b-t">As quatro qualidades de Gabriel, na ordem de cada escola. MIT: correção, consistência, completude e simplicidade da interface. New Jersey: simplicidade da implementação, correção, consistência e completude.</title>
+            <text aria-hidden="true" x="72" y="18" text-anchor="middle" class="t-big">O certo</text>
+            <text aria-hidden="true" x="72" y="34" text-anchor="middle" class="t-mu">MIT</text>
+            <text aria-hidden="true" x="228" y="18" text-anchor="middle" class="t-big">O pior</text>
+            <text aria-hidden="true" x="228" y="34" text-anchor="middle" class="t-mu">New Jersey</text>
+            <path d="M150 8 V214" class="dash"/>
+            <g class="col">
+              <rect x="4" y="48" width="136" height="34" class="ac"/><text aria-hidden="true" x="14" y="70" class="inv">correção</text>
+              <rect x="4" y="88" width="136" height="34" class="ac" style="opacity:.75"/><text aria-hidden="true" x="14" y="110" class="inv">consistência</text>
+              <rect x="4" y="128" width="136" height="34" class="bx"/><text aria-hidden="true" x="14" y="150">completude</text>
+              <rect x="4" y="168" width="136" height="34" class="bx"/><text aria-hidden="true" x="14" y="183">simplicidade</text><text aria-hidden="true" x="14" y="197" class="t-mu">da interface</text>
+            </g>
+            <g class="col">
+              <rect x="160" y="48" width="136" height="34" class="ac"/><text aria-hidden="true" x="170" y="63" class="inv">simplicidade</text><text aria-hidden="true" x="170" y="77" class="inv">da implementação</text>
+              <rect x="160" y="88" width="136" height="34" class="bx"/><text aria-hidden="true" x="170" y="110">correção</text>
+              <rect x="160" y="128" width="136" height="34" class="bx"/><text aria-hidden="true" x="170" y="150">consistência</text>
+              <rect x="160" y="168" width="136" height="34" class="rl"/><text aria-hidden="true" x="170" y="190">completude</text>
+            </g>
+            <text aria-hidden="true" x="150" y="232" text-anchor="middle" class="t-mu">de cima para baixo: o que pesa mais</text>
+          </svg>
+          <figcaption>As quatro qualidades do ensaio. No MIT, correção e consistência não se negociam. Em New Jersey, a implementação simples vem antes de tudo.</figcaption>
+        </figure>
       </div>
     </div>
     <h3 class="quem-tit">Quem é quem</h3>
@@ -239,10 +361,11 @@
         <ol>
           <li><span class="ref">PRINCETON CS217</span><a href="https://www.cs.princeton.edu/courses/archive/spr01/cs217/pike.html">Pike, Notes on Programming in C</a><span class="ano">1989</span></li>
           <li><span class="ref">DREAMSONGS</span><a href="https://dreamsongs.com/RiseOfWorseIsBetter.html">Gabriel, The Rise of Worse is Better</a><span class="ano">1989</span></li>
+          <li><span class="ref">DREAMSONGS</span><a href="https://dreamsongs.com/WorseIsBetter.html">A história do ensaio e das réplicas</a><span class="ano">—</span></li>
         </ol>
       </div>
     </div>
-    <div class="folio">2</div>
+    <div class="folio impar"><span class="pg">05</span><span>Mentes do Software · Edição 1 · Outubro de 2026</span></div>
   </div>
 </article>
 
@@ -294,7 +417,7 @@
         </ol>
       </div>
     </div>
-    <div class="folio">3</div>
+    <div class="folio par"><span class="pg">06</span><span>Mentes do Software · Edição 1 · Outubro de 2026</span></div>
   </div>
 </article>
 
@@ -308,7 +431,7 @@
       <div class="texto">
         <p>Em 2011, <strong>Rich Hickey</strong>, criador do Clojure, deu a palestra <em>Simple Made Easy</em>, uma das mais citadas da área. A distinção central: <strong>simples</strong> é o oposto de entrelaçado, e é uma propriedade da estrutura. <strong>Fácil</strong> é o que está à mão, o que você já conhece, e depende de quem usa.</p>
         <p>Muita escolha ruim nasce de confundir os dois: pegar o que é fácil, como a ferramenta conhecida ou o atalho, e acabar com um sistema trançado, em que não dá para mexer numa parte sem mexer em outra.</p>
-        <p>Cinco anos antes, Ben Moseley e Peter Marks escreveram <em>Out of the Tar Pit</em>. Eles discordam de Brooks e dizem que a maior parte da complexidade é <strong>acidental</strong>, e que a fonte número um é o <strong>estado mutável</strong>: o valor que muda e que você precisa rastrear em todas as combinações. A proposta deles é separar o estado, a lógica e o controle, usando funções puras e o modelo relacional.</p>
+        <p>Cinco anos antes, Ben Moseley e Peter Marks escreveram <em>Out of the Tar Pit</em>. Eles partem da divisão de Brooks entre complexidade essencial e acidental, mas discordam na dose: para eles, a maior parte é <strong>acidental</strong>, e que a fonte número um é o <strong>estado mutável</strong>: o valor que muda e que você precisa rastrear em todas as combinações. A proposta deles é separar o estado, a lógica e o controle, usando funções puras e o modelo relacional.</p>
         <p>O herói dessa proposta é o modelo relacional de Codd, o mesmo que está por trás de todo banco de dados SQL. Um SELECT bem escrito é código sem estado: entra dado, sai dado.</p>
       </div>
       <div class="margem">
@@ -330,6 +453,37 @@
         </figure>
       </div>
     </div>
+    <section class="pratica" aria-labelledby="pr4">
+      <h3 id="pr4"><span>Na prática</span>Hickey em JavaScript</h3>
+      <p class="pratica-intro">Um carrinho de compras e o seu total. A pergunta de Hickey: o que aqui está trançado com o quê?</p>
+      <div class="lado">
+        <figure>
+          <figcaption>Estado trançado</figcaption>
+<pre><code><span class="c">// duas variáveis que precisam andar juntas</span>
+let carrinho = [];
+let total = 0;
+
+function adicionar(item) {
+  carrinho.push(item);
+  total += item.preco;
+}
+<span class="c">// e quem remover precisa lembrar do total</span></code></pre>
+          <p class="veredito">O carrinho, o total e a ordem das chamadas estão trançados. Esqueça uma linha em algum lugar e o total mente.</p>
+        </figure>
+        <figure>
+          <figcaption>Valores e funções</figcaption>
+<pre><code><span class="c">// entra valor, sai valor novo</span>
+const adicionar = (carrinho, item) =>
+  [...carrinho, item];
+
+<span class="c">// o total é calculado, não guardado</span>
+const total = carrinho =>
+  carrinho.reduce((s, i) => s + i.preco, 0);</code></pre>
+          <p class="veredito">Não há o que sincronizar. Cada função pode ser entendida e testada sozinha, como um SELECT.</p>
+        </figure>
+      </div>
+      <p class="pratica-nota">Exemplo da redação. Hickey não fala de carrinho; a ideia de derivar em vez de guardar é a do <em>Out of the Tar Pit</em>, que separa o estado essencial do que pode ser calculado.</p>
+    </section>
     <h3 class="quem-tit">Quem é quem</h3>
     <ul class="quem">
       <li><span class="pt ph-RH" role="img" aria-label="Rich Hickey"></span><div><h3>Rich Hickey</h3><span class="anos">EUA, criou o Clojure em 2007</span><p>Passou anos em sistemas comerciais antes de criar uma linguagem para fugir do estado mutável.</p></div></li>
@@ -346,7 +500,7 @@
         </ol>
       </div>
     </div>
-    <div class="folio">4</div>
+    <div class="folio impar"><span class="pg">07</span><span>Mentes do Software · Edição 1 · Outubro de 2026</span></div>
   </div>
 </article>
 
@@ -397,7 +551,7 @@
         </ol>
       </div>
     </div>
-    <div class="folio">5</div>
+    <div class="folio par"><span class="pg">08</span><span>Mentes do Software · Edição 1 · Outubro de 2026</span></div>
   </div>
 </article>
 
@@ -434,6 +588,35 @@
         </figure>
       </div>
     </div>
+    <section class="pratica" aria-labelledby="pr6">
+      <h3 id="pr6"><span>Na prática</span>Ousterhout em JavaScript</h3>
+      <p class="pratica-intro">Ler um arquivo de texto. No livro, Ousterhout usa como exemplo de módulos rasos as classes de leitura de arquivo do Java, que obrigam a montar três objetos para ler um só arquivo.</p>
+      <div class="lado">
+        <figure>
+          <figcaption>Módulos rasos</figcaption>
+<pre><code><span class="c">// cada peça é pequena, mas quem chama</span>
+<span class="c">// precisa conhecer todas</span>
+const arq    = abrirArquivo(caminho);
+const buffer = criarBuffer(arq, 4096);
+const leitor = criarLeitor(buffer, 'utf-8');
+const texto  = leitor.lerTudo();
+fecharArquivo(arq);</code></pre>
+          <p class="veredito">Cinco chamadas, e se alguém esquecer o <code>fecharArquivo</code>, ninguém avisa. A complexidade foi para as conexões.</p>
+        </figure>
+        <figure>
+          <figcaption>Módulo profundo</figcaption>
+<pre><code><span class="c">// uma chamada; buffer, codificação</span>
+<span class="c">// e fechamento ficam escondidos</span>
+const texto = lerTexto(caminho);
+
+<span class="c">// quem precisar de controle fino</span>
+<span class="c">// pede, mas não é obrigado a pedir</span>
+const bruto = lerTexto(caminho, { codificacao: 'latin1' });</code></pre>
+          <p class="veredito">Interface pequena, com o caso comum como padrão. No livro, Ousterhout pede exatamente isso: o caso comum tem que ser o mais simples possível.</p>
+        </figure>
+      </div>
+      <p class="pratica-nota">Exemplo da redação. Os argumentos de Martin a favor das peças pequenas estão no quadro abaixo.</p>
+    </section>
     <div class="debate">
       <div>
         <h3>John Ousterhout</h3>
@@ -467,7 +650,7 @@
         </ol>
       </div>
     </div>
-    <div class="folio">6</div>
+    <div class="folio impar"><span class="pg">09</span><span>Mentes do Software · Edição 1 · Outubro de 2026</span></div>
   </div>
 </article>
 
@@ -480,7 +663,7 @@
     <div class="corpo">
       <div class="texto">
         <p>Esta escola vem dos jogos, onde cada milissegundo conta. <strong>Mike Acton</strong>, diretor de engine da Insomniac Games, abriu a CppCon de 2014 com uma ideia simples: o trabalho de um programa é transformar dados, numa máquina real. Abstrações que ignoram como a memória funciona custam caro.</p>
-        <p>Em 2023, <strong>Casey Muratori</strong> publicou <em>Clean Code, Horrible Performance</em>. Ele pegou regras do Clean Code, como trocar o switch por polimorfismo e quebrar tudo em funções minúsculas, e mediu. Segundo ele, o código que seguia as regras chegou a ficar mais de 15 vezes mais lento. O texto gerou um debate enorme.</p>
+        <p>Em 2023, <strong>Casey Muratori</strong> publicou <em>Clean Code, Horrible Performance</em>. Ele pegou regras do Clean Code, como trocar o switch por polimorfismo e quebrar tudo em funções minúsculas, e mediu, num exemplo pequeno que calcula a área de formas geométricas. Segundo ele, o código que seguia as regras chegou a ficar mais de dez vezes mais lento. O texto gerou um debate enorme.</p>
         <p>A crítica justa a Muratori é que essa diferença pesa muito em jogos e simulações, e bem menos em sistema de negócio, onde o gargalo costuma ser o banco ou a rede.</p>
         <p>Mesmo assim, a lição serve para você: <strong>meça antes de opinar</strong>. Num banco de dados, medir é olhar o plano de execução da consulta.</p>
       </div>
@@ -522,7 +705,7 @@
         </ol>
       </div>
     </div>
-    <div class="folio">7</div>
+    <div class="folio par"><span class="pg">10</span><span>Mentes do Software · Edição 1 · Outubro de 2026</span></div>
   </div>
 </article>
 
@@ -575,7 +758,7 @@
         </ol>
       </div>
     </div>
-    <div class="folio">8</div>
+    <div class="folio impar"><span class="pg">11</span><span>Mentes do Software · Edição 1 · Outubro de 2026</span></div>
   </div>
 </article>
 
@@ -624,7 +807,7 @@
         </ol>
       </div>
     </div>
-    <div class="folio">9</div>
+    <div class="folio par"><span class="pg">12</span><span>Mentes do Software · Edição 1 · Outubro de 2026</span></div>
   </div>
 </article>
 
@@ -637,8 +820,8 @@
     <div class="corpo">
       <div class="texto">
         <p><strong>Fred Brooks</strong> gerenciou o OS/360 da IBM, um dos maiores projetos de software dos anos 60, e escreveu o que aprendeu em <em>The Mythical Man-Month</em>, de 1975. A lição mais famosa: colocar mais gente num projeto atrasado o atrasa ainda mais, porque cada pessoa nova precisa aprender e conversar com as outras.</p>
-        <p>A lição que ele considerava mais importante é a <strong>integridade conceitual</strong>. É melhor um sistema com menos funções e uma ideia coerente do que um com muitas boas ideias desencontradas. Em 1986, com <em>No Silver Bullet</em>, ele separou a complexidade essencial, a do problema, da acidental, a das ferramentas, e disse que nenhuma ferramenta vai multiplicar por dez a produtividade.</p>
-        <p><strong>Melvin Conway</strong> observou em 1968 que o sistema copia a estrutura de comunicação da organização que o constrói. A Harvard Business Review recusou o artigo por falta de prova. Brooks o batizou de Lei de Conway, e pesquisas posteriores confirmaram o espelhamento.</p>
+        <p>A lição que ele considerava mais importante é a <strong>integridade conceitual</strong>. É melhor um sistema com menos funções e uma ideia coerente do que um com muitas boas ideias desencontradas. Em 1986, com <em>No Silver Bullet</em>, ele separou a complexidade essencial, a do problema, da acidental, a das ferramentas, e previu que nenhuma técnica ou ferramenta, sozinha, multiplicaria por dez a produtividade dentro de uma década.</p>
+        <p><strong>Melvin Conway</strong> observou em 1968 que o sistema copia a estrutura de comunicação da organização que o constrói. A Harvard Business Review recusou o artigo por falta de prova. O artigo saiu na revista Datamation, Brooks o batizou de Lei de Conway, e estudos posteriores encontraram esse espelhamento em projetos reais.</p>
         <p>Para fechar com humor: Carson Gross, criador do htmx, escreveu em 2022 o <em>Grug Brained Developer</em>, como se fosse um programador das cavernas. Para o Grug, a complexidade é o maior predador, e a melhor arma contra ela é a palavra "não". Tem críticos, que lembram que parte da complexidade vem do negócio real, mas é leitura divertida e certeira.</p>
       </div>
       <div class="margem">
@@ -681,7 +864,7 @@
         </ol>
       </div>
     </div>
-    <div class="folio">10</div>
+    <div class="folio impar"><span class="pg">13</span><span>Mentes do Software · Edição 1 · Outubro de 2026</span></div>
   </div>
 </article>
 
@@ -733,6 +916,7 @@
         </ul>
       </div>
     </div>
+    <div class="folio impar"><span class="pg">15</span><span>Mentes do Software · Edição 1 · Outubro de 2026</span></div>
   </div>
 </section>
 
@@ -795,6 +979,7 @@
         </ul>
       </section>
     </div>
+    <div class="folio par"><span class="pg">16</span><span>Mentes do Software · Edição 1 · Outubro de 2026</span></div>
   </div>
 </section>
 
@@ -816,15 +1001,26 @@
       <h3>O exercício que transforma leitura em critério</h3>
       <p>A cada autor, abra um código seu, como uma função, um módulo ou uma tela, e pergunte o que essa pessoa diria dele. Que segredo esse módulo esconde? O que está trançado aqui? Onde está o estado? Escreva a resposta em três linhas. Em sete semanas você terá uma teoria própria, do jeito que Naur descreve.</p>
     </div>
+    <div class="folio impar"><span class="pg">17</span><span>Mentes do Software · Edição 1 · Outubro de 2026</span></div>
   </div>
 </section>
 
 <footer class="expediente">
   <div class="pagina">
+    <div class="mancha">
+      <p class="mancha-nome">Mentes do <span>Software</span></p>
+      <p class="mancha-num">Edição 1 · Outubro de 2026</p>
+    </div>
     <h2>Expediente</h2>
-    <p>Os retratos sem foto livre disponível (Gabriel, Dahl e Nygaard, Moseley e Marks, Acton, Muratori, Evans, Conway e Gross) aparecem só com as iniciais. Os trechos em destaque são paráfrases, a não ser a regra de Pike, citada literalmente. Datas e fatos conferidos nas fontes listadas abaixo. Encontrou um erro? Abra <a href="https://github.com/OtavioFelix-in/Mentes-do-Software/issues">uma issue no repositório</a>.</p>
-    <p>Edição e texto: <a href="https://otaviofelix-in.github.io/site/">Otávio Felix</a>.</p>
-    <p>Fotos: Wikimedia Commons, todas com licença livre. Recortadas.</p>
+    <dl class="cargos">
+      <div><dt>Edição e texto</dt><dd><a href="https://otaviofelix-in.github.io/site/">Otávio Felix</a></dd></div>
+      <div><dt>Fotos</dt><dd>Wikimedia Commons, todas com licença livre. Recortadas.</dd></div>
+      <div><dt>Tipografia</dt><dd>IBM Plex Sans Condensed, Serif e Mono</dd></div>
+      <div><dt>Figuras e código</dt><dd>Desenhos e exemplos da redação, feitos para explicar as ideias. Não são reproduções dos autores.</dd></div>
+      <div><dt>Correções</dt><dd><a href="https://github.com/OtavioFelix-in/Mentes-do-Software/issues">Abra uma issue no repositório</a></dd></div>
+      <div><dt>Formato</dt><dd>Uma página em HTML e CSS, sem framework. Também imprime em A4.</dd></div>
+    </dl>
+    <p>Os retratos sem foto livre disponível (Gabriel, Dahl e Nygaard, Moseley e Marks, Acton, Muratori, Evans, Conway e Gross) aparecem só com as iniciais. Os trechos em destaque são paráfrases, a não ser a regra de Pike, citada literalmente. Datas e fatos conferidos nas fontes listadas abaixo.</p>
     <ul class="creditos"><li>Edsger Dijkstra: <a href="https://commons.wikimedia.org/wiki/File:Edsger_Wybe_Dijkstra.jpg">Hamilton Richards</a>, CC BY-SA 3.0</li><li>David Parnas: <a href="https://commons.wikimedia.org/wiki/File:David_Parnas.jpg">Hubert Baumeister</a>, CC BY-SA 3.0</li><li>Tony Hoare: <a href="https://commons.wikimedia.org/wiki/File:Sir_Tony_Hoare_IMG_5125.jpg">Rama</a>, CC BY-SA 2.0 fr</li><li>Leslie Lamport: <a href="https://commons.wikimedia.org/wiki/File:Leslie_Lamport.jpg">Leslie Lamport</a>, Copyrighted free use</li><li>Ken Thompson: <a href="https://commons.wikimedia.org/wiki/File:Ken_Thompson,_2019.jpg">A.C.Diller</a>, CC BY-SA 4.0</li><li>Dennis Ritchie: <a href="https://commons.wikimedia.org/wiki/File:Dennis_Ritchie_2011.jpg">Denise Panyik-Dale</a>, CC BY 2.0</li><li>Rob Pike: <a href="https://commons.wikimedia.org/wiki/File:Rob-pike-oscon.jpg">Kevin Shockey</a>, CC BY 2.0</li><li>Alan Kay: <a href="https://commons.wikimedia.org/wiki/File:Alan_Kay_and_the_prototype_of_the_Dynabook_(3009206205).jpg">Marcin Wichary from San Francisco, U.S.A.</a>, CC BY 2.0</li><li>Rich Hickey: <a href="https://commons.wikimedia.org/wiki/File:Rich_Hickey.jpg">Tapestry Dude</a>, CC BY-SA 2.0</li><li>John Backus: <a href="https://commons.wikimedia.org/wiki/File:John_Backus_2.jpg">PIerre.Lescanne</a>, CC BY-SA 4.0</li><li>Kent Beck: <a href="https://commons.wikimedia.org/wiki/File:Kent_Beck_no_Workshop_Mapping_XP.jpg">Improve It</a>, CC BY-SA 2.0</li><li>Martin Fowler: <a href="https://commons.wikimedia.org/wiki/File:Webysther_20150414193208_-_Martin_Fowler.jpg">Webysther Nunes</a>, CC BY-SA 4.0</li><li>John Ousterhout: <a href="https://commons.wikimedia.org/wiki/File:Ouster_face.png">John Ousterhout</a>, Tcl/Tk</li><li>Robert C. Martin: <a href="https://commons.wikimedia.org/wiki/File:Robert_C._Martin_surrounded_by_computers_(cropped).jpg">Angelacleancoder</a>, CC BY-SA 4.0</li><li>Joe Armstrong: <a href="https://commons.wikimedia.org/wiki/File:An_erlang_expert_and_some_guy_named_Joe_(4133214882).jpg">Måns Sandström from Stockholm, Sweden</a>, CC BY 2.0</li><li>Fred Brooks: <a href="https://commons.wikimedia.org/wiki/File:Fred_Brooks_(cropped_square).jpg">Copyright owned by SD&amp;M (www.sdm.de)</a>, CC BY-SA 3.0</li><li>Peter Naur: <a href="https://commons.wikimedia.org/wiki/File:Peternaur.JPG">The original uploader was Eriktj at English Wikipedia.</a>, CC BY-SA 3.0</li><li>Barbara Liskov: <a href="https://commons.wikimedia.org/wiki/File:Barbara_Liskov_MIT_computer_scientist_2010.jpg">Kenneth C. Zirkel</a>, CC BY-SA 3.0</li></ul>
     <p>Fontes principais:</p>
     <ul>
@@ -834,7 +1030,9 @@
       <li><a href="https://computerhistory.org/blog/in-memoriam-sir-antony-hoare-1934-2026/">Computer History Museum, sobre Hoare</a></li>
       <li><a href="https://martinfowler.com/bliki/MythicalManMonth.html">Fowler, Mythical Man-Month</a></li>
       <li><a href="https://engsoftmoderna.info/">engsoftmoderna.info</a></li>
+      <li><a href="https://dreamsongs.com/WorseIsBetter.html">dreamsongs.com, a história do Worse is Better</a></li>
     </ul>
+    <div class="folio par"><span class="pg">18</span><span>Mentes do Software · Edição 1 · Outubro de 2026</span></div>
   </div>
 </footer>
 

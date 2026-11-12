@@ -38,6 +38,14 @@ Todas resolvidas: meta tags e prévia, favicon, tese do Armstrong (erlang.org), 
 - Links conferidos no navegador em 11/11: SE Radio 577 e arquivo EWD abrem; Microsoft Research mudou de endereço e foi atualizado.
 - [ ] DTIC (Parnas, AD0773837): o site estava em manutenção em 11/11. Conferir de novo depois.
 
+## Revisão de 12/11/2026 (pedida por ele, ainda sem commit)
+
+- Precisão: Worse is Better reescrito (origem na palestra de 1990, rótulos MIT/New Jersey, exemplo do PC loser-ing, réplicas e "ainda não consigo decidir"), Tar Pit x Brooks, No Silver Bullet ("em uma década"), Conway (Datamation, "encontraram evidências"), Muratori ("mais de dez vezes", exemplo das formas).
+- Visual: página "Linha do tempo" (`#linha`, p. 04) e figura das quatro qualidades de Gabriel (`.f-gabriel`).
+- Código: quadros `.pratica` (antes/depois em JS) nas reportagens 1 (Parnas), 4 (Hickey) e 6 (Ousterhout). São exemplos da redação, avisados como tal.
+- Revista: selo Nº 1 e manchete na capa, chamadas com página, páginas no sumário, folios numerados (par à esquerda, ímpar à direita, de 03 a 18) e expediente com cargos.
+- Numeração: capa 1, sumário 2, abertura 3, linha do tempo 4, reportagens 5–14, síntese 15, biblioteca 16, trilha 17, expediente 18. Se entrar página nova, renumere folios, sumário e chamadas.
+
 ## Estrutura dos arquivos
 
 - `index.html`: a revista inteira, sem build e sem framework.
